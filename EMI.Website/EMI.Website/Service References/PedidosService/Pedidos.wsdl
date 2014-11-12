@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Pedidos" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPedidos_ObtenerPedidosPaginados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPedidosPaginados" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_ObtenerPedidosPaginados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPedidosPaginadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_ObtenerDetallesPedidosPaginados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDetallesPedidosPaginados" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_ObtenerDetallesPedidosPaginados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDetallesPedidosPaginadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_ObtenerDespachosPaginados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDespachosPaginados" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_ObtenerDespachosPaginados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDespachosPaginadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_GuardarPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarPedido" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_GuardarPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_AutorizarPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:AutorizarPedido" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_AutorizarPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AutorizarPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_GuardarDespacho_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarDespacho" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_GuardarDespacho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarDespachoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_GuardarDetalleDespacho_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarDetalleDespacho" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_GuardarDetalleDespacho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarDetalleDespachoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_GuardarRecepcionDespachoMuniciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarRecepcionDespachoMuniciones" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_GuardarRecepcionDespachoMuniciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarRecepcionDespachoMunicionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_GuardarRecepcionDespachoArmamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarRecepcionDespachoArmamento" />
+  </wsdl:message>
+  <wsdl:message name="IPedidos_GuardarRecepcionDespachoArmamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarRecepcionDespachoArmamentoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPedidos">
+    <wsdl:operation name="ObtenerPedidosPaginados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidos/ObtenerPedidosPaginados" message="tns:IPedidos_ObtenerPedidosPaginados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidos/ObtenerPedidosPaginadosResponse" message="tns:IPedidos_ObtenerPedidosPaginados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDetallesPedidosPaginados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidos/ObtenerDetallesPedidosPaginados" message="tns:IPedidos_ObtenerDetallesPedidosPaginados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidos/ObtenerDetallesPedidosPaginadosResponse" message="tns:IPedidos_ObtenerDetallesPedidosPaginados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDespachosPaginados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidos/ObtenerDespachosPaginados" message="tns:IPedidos_ObtenerDespachosPaginados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidos/ObtenerDespachosPaginadosResponse" message="tns:IPedidos_ObtenerDespachosPaginados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarPedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidos/GuardarPedido" message="tns:IPedidos_GuardarPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidos/GuardarPedidoResponse" message="tns:IPedidos_GuardarPedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AutorizarPedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidos/AutorizarPedido" message="tns:IPedidos_AutorizarPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidos/AutorizarPedidoResponse" message="tns:IPedidos_AutorizarPedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDespacho">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidos/GuardarDespacho" message="tns:IPedidos_GuardarDespacho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidos/GuardarDespachoResponse" message="tns:IPedidos_GuardarDespacho_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDetalleDespacho">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidos/GuardarDetalleDespacho" message="tns:IPedidos_GuardarDetalleDespacho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidos/GuardarDetalleDespachoResponse" message="tns:IPedidos_GuardarDetalleDespacho_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarRecepcionDespachoMuniciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidos/GuardarRecepcionDespachoMuniciones" message="tns:IPedidos_GuardarRecepcionDespachoMuniciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidos/GuardarRecepcionDespachoMunicionesResponse" message="tns:IPedidos_GuardarRecepcionDespachoMuniciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarRecepcionDespachoArmamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidos/GuardarRecepcionDespachoArmamento" message="tns:IPedidos_GuardarRecepcionDespachoArmamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidos/GuardarRecepcionDespachoArmamentoResponse" message="tns:IPedidos_GuardarRecepcionDespachoArmamento_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPedidos" type="tns:IPedidos">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerPedidosPaginados">
+      <soap:operation soapAction="http://tempuri.org/IPedidos/ObtenerPedidosPaginados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDetallesPedidosPaginados">
+      <soap:operation soapAction="http://tempuri.org/IPedidos/ObtenerDetallesPedidosPaginados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDespachosPaginados">
+      <soap:operation soapAction="http://tempuri.org/IPedidos/ObtenerDespachosPaginados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarPedido">
+      <soap:operation soapAction="http://tempuri.org/IPedidos/GuardarPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutorizarPedido">
+      <soap:operation soapAction="http://tempuri.org/IPedidos/AutorizarPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDespacho">
+      <soap:operation soapAction="http://tempuri.org/IPedidos/GuardarDespacho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDetalleDespacho">
+      <soap:operation soapAction="http://tempuri.org/IPedidos/GuardarDetalleDespacho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarRecepcionDespachoMuniciones">
+      <soap:operation soapAction="http://tempuri.org/IPedidos/GuardarRecepcionDespachoMuniciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarRecepcionDespachoArmamento">
+      <soap:operation soapAction="http://tempuri.org/IPedidos/GuardarRecepcionDespachoArmamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Pedidos">
+    <wsdl:port name="BasicHttpBinding_IPedidos" binding="tns:BasicHttpBinding_IPedidos">
+      <soap:address location="http://localhost:17877/Servicios/Pedidos.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{941CB00D-7217-45EA-9D94-9B14FA519FB0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EMI.Wcf.Aplicacion</RootNamespace>
+    <AssemblyName>EMI.Wcf.Aplicacion</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinqKit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\LinqKit.1.0\lib\35\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.2\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IBitacorasServicio.cs" />
+    <Compile Include="Interfaces\IReportesServicio.cs" />
+    <Compile Include="Interfaces\IUsuariosServicio.cs" />
+    <Compile Include="Interfaces\IUnidadesServicio.cs" />
+    <Compile Include="Interfaces\IKardexServicio.cs" />
+    <Compile Include="Interfaces\IPedidosServicio.cs" />
+    <Compile Include="Interfaces\IListasServicio.cs" />
+    <Compile Include="Interfaces\IMatareialesBelicosServicio.cs" />
+    <Compile Include="Interfaces\IMaterialesServicio.cs" />
+    <Compile Include="Interfaces\IAutorizacionServicio.cs" />
+    <Compile Include="Interfaces\ITablasServicio.cs" />
+    <Compile Include="Modelo\ArmamentoModel.cs" />
+    <Compile Include="Modelo\BitacorasModel.cs" />
+    <Compile Include="Modelo\MatLogisticosModel.cs" />
+    <Compile Include="Modelo\DetallePedidoModel.cs" />
+    <Compile Include="Modelo\ExistenciasModel.cs" />
+    <Compile Include="Modelo\UsuarioModel.cs" />
+    <Compile Include="Modelo\KardexModel.cs" />
+    <Compile Include="Modelo\PedidoModel.cs" />
+    <Compile Include="Modelo\FiltrosModel.cs" />
+    <Compile Include="Modelo\ListasModel.cs" />
+    <Compile Include="Modelo\ListasServicio.cs" />
+    <Compile Include="Modelo\RespuestaServicio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\AutorizacionServicio.cs" />
+    <Compile Include="Servicios\BitacorasServicio.cs" />
+    <Compile Include="Servicios\ReportesServicio.cs" />
+    <Compile Include="Servicios\UsuariosServicio.cs" />
+    <Compile Include="Servicios\UnidadesServicio.cs" />
+    <Compile Include="Servicios\KardexServicio.cs" />
+    <Compile Include="Servicios\PedidosServicio.cs" />
+    <Compile Include="Servicios\ListasServicio.cs" />
+    <Compile Include="Servicios\MaterialesBelicosServicio.cs" />
+    <Compile Include="Servicios\MaterialesServicio.cs" />
+    <Compile Include="Servicios\TablasServicio.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EMI.Wcf.Infraestructura\EMI.Wcf.Infraestructura.csproj">
+      <Project>{f99e1afa-fe6d-471d-ae69-311598be42e4}</Project>
+      <Name>EMI.Wcf.Infraestructura</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EMI.Wcf.Model\EMI.Wcf.Model.csproj">
+      <Project>{a7df2d2b-559c-4290-8fc8-488a994c786e}</Project>
+      <Name>EMI.Wcf.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="LISTAS1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_LISTA" type="xs:int" />
+      <xs:element minOccurs="0" name="LISTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LISTAS_ITEMS" nillable="true" type="tns:ArrayOfLISTAS_ITEMS" />
+      <xs:element minOccurs="0" name="MAYUS_MINUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TAM_LIMITE" type="xs:int" />
+      <xs:element minOccurs="0" name="TIPO_VALOR" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LISTAS1" nillable="true" type="tns:LISTAS1" />
+  <xs:complexType name="ArrayOfLISTAS_ITEMS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LISTAS_ITEMS" nillable="true" type="tns:LISTAS_ITEMS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLISTAS_ITEMS" nillable="true" type="tns:ArrayOfLISTAS_ITEMS" />
+  <xs:complexType name="LISTAS_ITEMS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_LISTA" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_PADRE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_TABLA" type="xs:int" />
+      <xs:element minOccurs="0" name="LISTAS1" nillable="true" type="tns:LISTAS1" />
+      <xs:element minOccurs="0" name="LISTAS_ITEMS1" nillable="true" type="tns:ArrayOfLISTAS_ITEMS" />
+      <xs:element minOccurs="0" name="LISTAS_ITEMS2" nillable="true" type="tns:LISTAS_ITEMS" />
+      <xs:element minOccurs="0" name="VALOR" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LISTAS_ITEMS" nillable="true" type="tns:LISTAS_ITEMS" />
+</xs:schema>

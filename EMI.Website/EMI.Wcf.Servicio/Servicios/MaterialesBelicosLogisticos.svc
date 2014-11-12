@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="EMI.Wcf.Servicio.Servicios.MaterialesBelicosLogisticos" CodeBehind="MaterialesBelicosLogisticos.svc.cs" %>

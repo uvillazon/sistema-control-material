@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:17877/Servicios/Usuarios.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" />
+  <xs:import schemaLocation="http://localhost:17877/Servicios/Usuarios.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" />
+  <xs:element name="ObtenerUsuariosPaginados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="paginacion" nillable="true" type="q1:Paginacion" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="filtros" nillable="true" type="q2:FiltrosModelOfUsuarioModelRb2EILji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsuariosPaginadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="ObtenerUsuariosPaginadosResult" nillable="true" type="q3:ListasServicioOfUsuarioModelRespLLZUzu_Sn" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPerfilesPaginados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="paginacion" nillable="true" type="q4:Paginacion" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="filtros" nillable="true" type="q5:FiltrosModelOfUsuarioModelRb2EILji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPerfilesPaginadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="ObtenerPerfilesPaginadosResult" nillable="true" type="q6:ListasServicioOfUsuarioModelRespLLZUzu_Sn" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" minOccurs="0" name="usr" nillable="true" type="q7:USUARIOS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="GuardarUsuarioResult" nillable="true" type="q8:RespuestaServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarContrasena">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrasena" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarContrasenaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="GuardarContrasenaResult" nillable="true" type="q9:RespuestaServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DesbloquearContrasena">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_USUARIO" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DesbloquearContrasenaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="DesbloquearContrasenaResult" nillable="true" type="q10:RespuestaServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

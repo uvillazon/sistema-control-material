@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.0.8/WCF/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://10.0.0.8/WCF/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" />
+  <xs:complexType name="Paginacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_dc" type="xs:long" />
+      <xs:element minOccurs="0" name="callback" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dir" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="limit" type="xs:int" />
+      <xs:element minOccurs="0" name="page" type="xs:int" />
+      <xs:element minOccurs="0" name="sort" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="start" type="xs:int" />
+      <xs:element minOccurs="0" name="total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Paginacion" nillable="true" type="tns:Paginacion" />
+  <xs:complexType name="FiltrosModelOfArmamentoModelRb2EILji">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="FiltrosModelOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArmamentoModel" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comparador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contiene" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Diccionario" nillable="true" type="q1:ArrayOfKeyValueOfstringanyType" />
+      <xs:element minOccurs="0" name="Entidad" nillable="true" type="tns:ArmamentoModel" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Estados" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="FECHA_FINAL" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_INICIAL" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Operador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Predicado" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Unidades" nillable="true" type="q3:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FiltrosModelOfArmamentoModelRb2EILji" nillable="true" type="tns:FiltrosModelOfArmamentoModelRb2EILji" />
+  <xs:complexType name="ArmamentoModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORIA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_ITEM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_BELICO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_LOGISTICO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_UNIDAD" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArmamentoModel" nillable="true" type="tns:ArmamentoModel" />
+  <xs:complexType name="ListasServicioOfArmamentoModelRespLLZUzu_Sn">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ListasServicioOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArmamentoModelResp" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" minOccurs="0" name="datos" nillable="true" type="q4:ArrayOfArmamentoModelResp" />
+      <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListasServicioOfArmamentoModelRespLLZUzu_Sn" nillable="true" type="tns:ListasServicioOfArmamentoModelRespLLZUzu_Sn" />
+  <xs:complexType name="ListasServicioOfMatBelicoModelRespLLZUzu_Sn">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ListasServicioOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MatBelicoModelResp" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" minOccurs="0" name="datos" nillable="true" type="q5:ArrayOfMatBelicoModelResp" />
+      <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListasServicioOfMatBelicoModelRespLLZUzu_Sn" nillable="true" type="tns:ListasServicioOfMatBelicoModelRespLLZUzu_Sn" />
+  <xs:complexType name="ListasServicioOfParteArmamentoModelRespLLZUzu_Sn">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ListasServicioOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ParteArmamentoModelResp" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" minOccurs="0" name="datos" nillable="true" type="q6:ArrayOfParteArmamentoModelResp" />
+      <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListasServicioOfParteArmamentoModelRespLLZUzu_Sn" nillable="true" type="tns:ListasServicioOfParteArmamentoModelRespLLZUzu_Sn" />
+  <xs:complexType name="RespuestaServicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaServicio" nillable="true" type="tns:RespuestaServicio" />
+  <xs:complexType name="ListasServicioOfMatLogisticoModelRespLLZUzu_Sn">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ListasServicioOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MatLogisticoModelResp" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" minOccurs="0" name="datos" nillable="true" type="q7:ArrayOfMatLogisticoModelResp" />
+      <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListasServicioOfMatLogisticoModelRespLLZUzu_Sn" nillable="true" type="tns:ListasServicioOfMatLogisticoModelRespLLZUzu_Sn" />
+  <xs:complexType name="FiltrosModelOfKardexModelRb2EILji">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="FiltrosModelOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="KardexModel" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comparador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contiene" nillable="true" type="xs:string" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Diccionario" nillable="true" type="q8:ArrayOfKeyValueOfstringanyType" />
+      <xs:element minOccurs="0" name="Entidad" nillable="true" type="tns:KardexModel" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Estados" nillable="true" type="q9:ArrayOfstring" />
+      <xs:element minOccurs="0" name="FECHA_FINAL" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_INICIAL" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Operador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Predicado" nillable="true" type="xs:string" />
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Unidades" nillable="true" type="q10:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FiltrosModelOfKardexModelRb2EILji" nillable="true" type="tns:FiltrosModelOfKardexModelRb2EILji" />
+  <xs:complexType name="KardexModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID_ITEM_NO_OPERABLE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_ITEM_OPERABLE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_BELICO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MUNICION_UNIDAD" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KardexModel" nillable="true" type="tns:KardexModel" />
+  <xs:complexType name="ListasServicioOfHistoricoCmpModelRespLLZUzu_Sn">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ListasServicioOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="HistoricoCmpModelResp" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" minOccurs="0" name="datos" nillable="true" type="q11:ArrayOfHistoricoCmpModelResp" />
+      <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListasServicioOfHistoricoCmpModelRespLLZUzu_Sn" nillable="true" type="tns:ListasServicioOfHistoricoCmpModelRespLLZUzu_Sn" />
+</xs:schema>

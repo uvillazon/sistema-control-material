@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" />
+  <xs:import schemaLocation="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" />
+  <xs:element name="ObtenerPedidosPaginados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="paginacion" nillable="true" type="q1:Paginacion" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="filtros" nillable="true" type="q2:FiltrosModelOfPedidoModelRb2EILji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPedidosPaginadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="ObtenerPedidosPaginadosResult" nillable="true" type="q3:ListasServicioOfPedidoModelRespLLZUzu_Sn" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDetallesPedidosPaginados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="paginacion" nillable="true" type="q4:Paginacion" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="filtros" nillable="true" type="q5:FiltrosModelOfPedidoModelRb2EILji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDetallesPedidosPaginadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="ObtenerDetallesPedidosPaginadosResult" nillable="true" type="q6:ListasServicioOfPedidoModelRespLLZUzu_Sn" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDespachosPaginados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="paginacion" nillable="true" type="q7:Paginacion" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="filtros" nillable="true" type="q8:FiltrosModelOfPedidoModelRb2EILji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDespachosPaginadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="ObtenerDespachosPaginadosResult" nillable="true" type="q9:ListasServicioOfDespachoModelRespLLZUzu_Sn" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPedido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" minOccurs="0" name="ped" nillable="true" type="q10:PEDIDOS" />
+        <xs:element minOccurs="0" name="detalles" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPedidoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="GuardarPedidoResult" nillable="true" type="q11:RespuestaServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutorizarPedido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" minOccurs="0" name="ped" nillable="true" type="q12:PEDIDOS" />
+        <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutorizarPedidoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="AutorizarPedidoResult" nillable="true" type="q13:RespuestaServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarDespacho">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" minOccurs="0" name="des" nillable="true" type="q14:DESPACHOS" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarDespachoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="GuardarDespachoResult" nillable="true" type="q15:RespuestaServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarDetalleDespacho">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="detalles" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FECHA" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarDetalleDespachoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="GuardarDetalleDespachoResult" nillable="true" type="q16:RespuestaServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarRecepcionDespachoMuniciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_DESPACHO" type="xs:int" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarRecepcionDespachoMunicionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="GuardarRecepcionDespachoMunicionesResult" nillable="true" type="q17:RespuestaServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarRecepcionDespachoArmamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_DESPACHO" type="xs:int" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarRecepcionDespachoArmamentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="GuardarRecepcionDespachoArmamentoResult" nillable="true" type="q18:RespuestaServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

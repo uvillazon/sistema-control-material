@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:17877/Servicios/Tablas.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" />
+  <xs:element name="ObtenerTablas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTablasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" minOccurs="0" name="ObtenerTablasResult" nillable="true" type="q1:ArrayOfTABLAS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTablasJson">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTablasJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" minOccurs="0" name="ObtenerTablasJsonResult" nillable="true" type="q2:ArrayOfTABLAS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

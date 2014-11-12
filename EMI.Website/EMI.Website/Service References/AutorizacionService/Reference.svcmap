@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6af5747a-4cf9-495e-9f04-c2b79305e324" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:17877/Servicios/Autorizacion.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Autorizacion.wsdl" MetadataType="Wsdl" ID="2acc0417-60ae-434f-ba0f-0ec443392488" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Autorizacion.svc?wsdl" />
+    <MetadataFile FileName="Autorizacion.disco" MetadataType="Disco" ID="9101e661-93b9-447d-a3ee-7e522be6303f" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Autorizacion.svc?disco" />
+    <MetadataFile FileName="Autorizacion.xsd" MetadataType="Schema" ID="d7bda27c-5ef2-4a76-b067-320deae90e04" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Autorizacion.svc?xsd=xsd3" />
+    <MetadataFile FileName="Autorizacion1.xsd" MetadataType="Schema" ID="833899af-20e0-49ac-ab35-710d3f5ce676" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Autorizacion.svc?xsd=xsd2" />
+    <MetadataFile FileName="Autorizacion2.xsd" MetadataType="Schema" ID="73acf424-70e1-4406-93f6-e8493f544f90" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Autorizacion.svc?xsd=xsd1" />
+    <MetadataFile FileName="Autorizacion3.xsd" MetadataType="Schema" ID="164ee4c3-b713-4ace-927e-5d2c035c4c5c" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Autorizacion.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

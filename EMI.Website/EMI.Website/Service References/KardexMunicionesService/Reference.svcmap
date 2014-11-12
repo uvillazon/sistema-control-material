@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="54763a23-49af-4a28-9e6b-e5440d9f22d4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:17877/Servicios/KardexMuniciones.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="KardexMuniciones.xsd" MetadataType="Schema" ID="b3d74593-8cb8-4151-b938-bf11a2675c5c" SourceId="1" SourceUrl="http://localhost:17877/Servicios/KardexMuniciones.svc?xsd=xsd1" />
+    <MetadataFile FileName="KardexMuniciones.disco" MetadataType="Disco" ID="bbb3500c-9124-40c8-ad17-ace1bfd96cb5" SourceId="1" SourceUrl="http://localhost:17877/Servicios/KardexMuniciones.svc?disco" />
+    <MetadataFile FileName="KardexMuniciones.wsdl" MetadataType="Wsdl" ID="a381b264-e64a-441d-b14b-fcc11dbcfeae" SourceId="1" SourceUrl="http://localhost:17877/Servicios/KardexMuniciones.svc?wsdl" />
+    <MetadataFile FileName="KardexMuniciones1.xsd" MetadataType="Schema" ID="25dd361a-083d-488f-8e38-97d44145c050" SourceId="1" SourceUrl="http://localhost:17877/Servicios/KardexMuniciones.svc?xsd=xsd4" />
+    <MetadataFile FileName="KardexMuniciones2.xsd" MetadataType="Schema" ID="2f30ad06-fddb-4932-a1a8-9768d3379972" SourceId="1" SourceUrl="http://localhost:17877/Servicios/KardexMuniciones.svc?xsd=xsd2" />
+    <MetadataFile FileName="KardexMuniciones3.xsd" MetadataType="Schema" ID="5d08e97b-694d-4858-8876-08daa8f68ab6" SourceId="1" SourceUrl="http://localhost:17877/Servicios/KardexMuniciones.svc?xsd=xsd3" />
+    <MetadataFile FileName="KardexMuniciones4.xsd" MetadataType="Schema" ID="10ed3688-d05c-4161-a4a3-50f32f76908a" SourceId="1" SourceUrl="http://localhost:17877/Servicios/KardexMuniciones.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
