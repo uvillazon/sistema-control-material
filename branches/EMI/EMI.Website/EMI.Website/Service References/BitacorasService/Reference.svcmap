@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c07ec289-2b73-47a1-b133-c0131d57fe2f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:17877/Servicios/Bitacoras.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Bitacoras.wsdl" MetadataType="Wsdl" ID="f9cf742b-4866-466c-be9c-e46dc0c0af07" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Bitacoras.svc?wsdl" />
+    <MetadataFile FileName="Bitacoras.xsd" MetadataType="Schema" ID="06e1036f-9878-40cc-89b1-04be3360acc8" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Bitacoras.svc?xsd=xsd3" />
+    <MetadataFile FileName="Bitacoras1.xsd" MetadataType="Schema" ID="952a3ee0-135d-4a89-ad57-fb4b6c5e7f35" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Bitacoras.svc?xsd=xsd0" />
+    <MetadataFile FileName="Bitacoras2.xsd" MetadataType="Schema" ID="bc6c97bc-86eb-4a2e-ac08-e26401c2180b" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Bitacoras.svc?xsd=xsd2" />
+    <MetadataFile FileName="Bitacoras.disco" MetadataType="Disco" ID="d39aed62-c70e-4e3d-a2d7-805f7518fdd3" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Bitacoras.svc?disco" />
+    <MetadataFile FileName="Bitacoras3.xsd" MetadataType="Schema" ID="89d446d3-1994-4a75-a82b-8377aabfa5e5" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Bitacoras.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

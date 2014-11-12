@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:17877/Servicios/Listas.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" />
+  <xs:import schemaLocation="http://localhost:17877/Servicios/Listas.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" />
+  <xs:element name="ObtenerListasItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="paginacion" nillable="true" type="q1:Paginacion" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="filtros" nillable="true" type="q2:FiltrosModelOfListasItemsModelRb2EILji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListasItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="ObtenerListasItemsResult" nillable="true" type="q3:ListasServicioOfListasItemsModelRb2EILji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="paginacion" nillable="true" type="q4:Paginacion" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="filtros" nillable="true" type="q5:FiltrosModelOfListasModelRb2EILji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="ObtenerListasResult" nillable="true" type="q6:ListasServicioOfListasModelRb2EILji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodasListas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodasListasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="ObtenerTodasListasResult" nillable="true" type="q7:ListasServicioOfListasModelRb2EILji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarLista">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" minOccurs="0" name="lista" nillable="true" type="q8:LISTAS1" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarListaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="GuardarListaResult" nillable="true" type="q9:RespuestaServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarItemLista">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" minOccurs="0" name="lista" nillable="true" type="q10:LISTAS_ITEMS" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarItemListaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" minOccurs="0" name="GuardarItemListaResult" nillable="true" type="q11:RespuestaServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

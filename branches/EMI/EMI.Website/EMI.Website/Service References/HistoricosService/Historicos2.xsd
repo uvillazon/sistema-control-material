@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:17877/Servicios/Historicos.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:17877/Servicios/Historicos.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" />
+  <xs:complexType name="Paginacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_dc" type="xs:long" />
+      <xs:element minOccurs="0" name="callback" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dir" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="limit" type="xs:int" />
+      <xs:element minOccurs="0" name="page" type="xs:int" />
+      <xs:element minOccurs="0" name="sort" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="start" type="xs:int" />
+      <xs:element minOccurs="0" name="total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Paginacion" nillable="true" type="tns:Paginacion" />
+  <xs:complexType name="FiltrosModelOfKardexModelRb2EILji">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="FiltrosModelOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="KardexModel" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comparador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contiene" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Diccionario" nillable="true" type="q1:ArrayOfKeyValueOfstringanyType" />
+      <xs:element minOccurs="0" name="Entidad" nillable="true" type="tns:KardexModel" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Estados" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="FECHA_FINAL" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_INICIAL" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Operador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Predicado" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Unidades" nillable="true" type="q3:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FiltrosModelOfKardexModelRb2EILji" nillable="true" type="tns:FiltrosModelOfKardexModelRb2EILji" />
+  <xs:complexType name="KardexModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID_ITEM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_ITEM_NO_OPERABLE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_ITEM_OPERABLE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_BELICO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MUNICION_UNIDAD" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KardexModel" nillable="true" type="tns:KardexModel" />
+  <xs:complexType name="ListasServicioOfHistoricoVerificacionModelRespLLZUzu_Sn">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ListasServicioOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="HistoricoVerificacionModelResp" Namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" minOccurs="0" name="datos" nillable="true" type="q4:ArrayOfHistoricoVerificacionModelResp" />
+      <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="total" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListasServicioOfHistoricoVerificacionModelRespLLZUzu_Sn" nillable="true" type="tns:ListasServicioOfHistoricoVerificacionModelRespLLZUzu_Sn" />
+</xs:schema>

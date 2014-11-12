@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MaterialesBelicosLogisticos" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerMaterialesPaginados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMaterialesPaginados" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerMaterialesPaginados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMaterialesPaginadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerMatBelicosPaginados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMatBelicosPaginados" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerMatBelicosPaginados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMatBelicosPaginadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerMunicionesPorUnidadPaginados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMunicionesPorUnidadPaginados" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerMunicionesPorUnidadPaginados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMunicionesPorUnidadPaginadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerPartesArmamentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPartesArmamentos" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerPartesArmamentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPartesArmamentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerCmpArmamentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCmpArmamentos" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerCmpArmamentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCmpArmamentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_GuardarModeloArmamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarModeloArmamento" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_GuardarModeloArmamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarModeloArmamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_GuardarItemArmamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarItemArmamento" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_GuardarItemArmamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarItemArmamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_BajaItemArmamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:BajaItemArmamento" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_BajaItemArmamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BajaItemArmamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_GuardarMuniciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarMuniciones" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_GuardarMuniciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarMunicionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerMatLogisticosPaginagos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMatLogisticosPaginagos" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerMatLogisticosPaginagos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMatLogisticosPaginagosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerItemMatLogisticosPaginagos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerItemMatLogisticosPaginagos" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerItemMatLogisticosPaginagos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerItemMatLogisticosPaginagosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_GuardarMatLogistico_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarMatLogistico" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_GuardarMatLogistico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarMatLogisticoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_GuardarItemMatLogistico_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarItemMatLogistico" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_GuardarItemMatLogistico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarItemMatLogisticoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_CambiarComponentesArmamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarComponentesArmamento" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_CambiarComponentesArmamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarComponentesArmamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_GuardarSalidaMunicionesUnidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarSalidaMunicionesUnidad" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_GuardarSalidaMunicionesUnidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarSalidaMunicionesUnidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_VerificacionMaterialLogistico_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionMaterialLogistico" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_VerificacionMaterialLogistico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionMaterialLogisticoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerHistoricosCmpArmamentoPaginados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerHistoricosCmpArmamentoPaginados" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerHistoricosCmpArmamentoPaginados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerHistoricosCmpArmamentoPaginadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerMaterialBelicoPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMaterialBelicoPorID" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerMaterialBelicoPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMaterialBelicoPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerArmamentoPorUnidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerArmamentoPorUnidad" />
+  </wsdl:message>
+  <wsdl:message name="IMaterialesBelicosLogisticos_ObtenerArmamentoPorUnidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerArmamentoPorUnidadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMaterialesBelicosLogisticos">
+    <wsdl:operation name="ObtenerMaterialesPaginados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMaterialesPaginados" message="tns:IMaterialesBelicosLogisticos_ObtenerMaterialesPaginados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMaterialesPaginadosResponse" message="tns:IMaterialesBelicosLogisticos_ObtenerMaterialesPaginados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMatBelicosPaginados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMatBelicosPaginados" message="tns:IMaterialesBelicosLogisticos_ObtenerMatBelicosPaginados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMatBelicosPaginadosResponse" message="tns:IMaterialesBelicosLogisticos_ObtenerMatBelicosPaginados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMunicionesPorUnidadPaginados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMunicionesPorUnidadPaginados" message="tns:IMaterialesBelicosLogisticos_ObtenerMunicionesPorUnidadPaginados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMunicionesPorUnidadPaginadosResponse" message="tns:IMaterialesBelicosLogisticos_ObtenerMunicionesPorUnidadPaginados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPartesArmamentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerPartesArmamentos" message="tns:IMaterialesBelicosLogisticos_ObtenerPartesArmamentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerPartesArmamentosResponse" message="tns:IMaterialesBelicosLogisticos_ObtenerPartesArmamentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCmpArmamentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerCmpArmamentos" message="tns:IMaterialesBelicosLogisticos_ObtenerCmpArmamentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerCmpArmamentosResponse" message="tns:IMaterialesBelicosLogisticos_ObtenerCmpArmamentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarModeloArmamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarModeloArmamento" message="tns:IMaterialesBelicosLogisticos_GuardarModeloArmamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarModeloArmamentoResponse" message="tns:IMaterialesBelicosLogisticos_GuardarModeloArmamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarItemArmamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarItemArmamento" message="tns:IMaterialesBelicosLogisticos_GuardarItemArmamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarItemArmamentoResponse" message="tns:IMaterialesBelicosLogisticos_GuardarItemArmamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BajaItemArmamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/BajaItemArmamento" message="tns:IMaterialesBelicosLogisticos_BajaItemArmamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/BajaItemArmamentoResponse" message="tns:IMaterialesBelicosLogisticos_BajaItemArmamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarMuniciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarMuniciones" message="tns:IMaterialesBelicosLogisticos_GuardarMuniciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarMunicionesResponse" message="tns:IMaterialesBelicosLogisticos_GuardarMuniciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMatLogisticosPaginagos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMatLogisticosPaginagos" message="tns:IMaterialesBelicosLogisticos_ObtenerMatLogisticosPaginagos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMatLogisticosPaginagosResponse" message="tns:IMaterialesBelicosLogisticos_ObtenerMatLogisticosPaginagos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerItemMatLogisticosPaginagos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerItemMatLogisticosPaginagos" message="tns:IMaterialesBelicosLogisticos_ObtenerItemMatLogisticosPaginagos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerItemMatLogisticosPaginagosResponse" message="tns:IMaterialesBelicosLogisticos_ObtenerItemMatLogisticosPaginagos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarMatLogistico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarMatLogistico" message="tns:IMaterialesBelicosLogisticos_GuardarMatLogistico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarMatLogisticoResponse" message="tns:IMaterialesBelicosLogisticos_GuardarMatLogistico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarItemMatLogistico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarItemMatLogistico" message="tns:IMaterialesBelicosLogisticos_GuardarItemMatLogistico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarItemMatLogisticoResponse" message="tns:IMaterialesBelicosLogisticos_GuardarItemMatLogistico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarComponentesArmamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/CambiarComponentesArmamento" message="tns:IMaterialesBelicosLogisticos_CambiarComponentesArmamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/CambiarComponentesArmamentoResponse" message="tns:IMaterialesBelicosLogisticos_CambiarComponentesArmamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarSalidaMunicionesUnidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarSalidaMunicionesUnidad" message="tns:IMaterialesBelicosLogisticos_GuardarSalidaMunicionesUnidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarSalidaMunicionesUnidadResponse" message="tns:IMaterialesBelicosLogisticos_GuardarSalidaMunicionesUnidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionMaterialLogistico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/VerificacionMaterialLogistico" message="tns:IMaterialesBelicosLogisticos_VerificacionMaterialLogistico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/VerificacionMaterialLogisticoResponse" message="tns:IMaterialesBelicosLogisticos_VerificacionMaterialLogistico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerHistoricosCmpArmamentoPaginados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerHistoricosCmpArmamentoPaginados" message="tns:IMaterialesBelicosLogisticos_ObtenerHistoricosCmpArmamentoPaginados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerHistoricosCmpArmamentoPaginadosResponse" message="tns:IMaterialesBelicosLogisticos_ObtenerHistoricosCmpArmamentoPaginados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMaterialBelicoPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMaterialBelicoPorID" message="tns:IMaterialesBelicosLogisticos_ObtenerMaterialBelicoPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMaterialBelicoPorIDResponse" message="tns:IMaterialesBelicosLogisticos_ObtenerMaterialBelicoPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArmamentoPorUnidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerArmamentoPorUnidad" message="tns:IMaterialesBelicosLogisticos_ObtenerArmamentoPorUnidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerArmamentoPorUnidadResponse" message="tns:IMaterialesBelicosLogisticos_ObtenerArmamentoPorUnidad_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMaterialesBelicosLogisticos" type="tns:IMaterialesBelicosLogisticos">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerMaterialesPaginados">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMaterialesPaginados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMatBelicosPaginados">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMatBelicosPaginados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMunicionesPorUnidadPaginados">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMunicionesPorUnidadPaginados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPartesArmamentos">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerPartesArmamentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCmpArmamentos">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerCmpArmamentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarModeloArmamento">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarModeloArmamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarItemArmamento">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarItemArmamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BajaItemArmamento">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/BajaItemArmamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarMuniciones">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarMuniciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMatLogisticosPaginagos">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMatLogisticosPaginagos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerItemMatLogisticosPaginagos">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerItemMatLogisticosPaginagos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarMatLogistico">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarMatLogistico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarItemMatLogistico">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarItemMatLogistico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarComponentesArmamento">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/CambiarComponentesArmamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarSalidaMunicionesUnidad">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/GuardarSalidaMunicionesUnidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionMaterialLogistico">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/VerificacionMaterialLogistico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerHistoricosCmpArmamentoPaginados">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerHistoricosCmpArmamentoPaginados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMaterialBelicoPorID">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerMaterialBelicoPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArmamentoPorUnidad">
+      <soap:operation soapAction="http://tempuri.org/IMaterialesBelicosLogisticos/ObtenerArmamentoPorUnidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MaterialesBelicosLogisticos">
+    <wsdl:port name="BasicHttpBinding_IMaterialesBelicosLogisticos" binding="tns:BasicHttpBinding_IMaterialesBelicosLogisticos">
+      <soap:address location="http://localhost:17877/Servicios/MaterialesBelicosLogisticos.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Usuarios" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Usuarios.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Usuarios.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Usuarios.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Usuarios.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Usuarios.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Usuarios.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUsuarios_ObtenerUsuariosPaginados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuariosPaginados" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_ObtenerUsuariosPaginados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuariosPaginadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_ObtenerPerfilesPaginados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPerfilesPaginados" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_ObtenerPerfilesPaginados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPerfilesPaginadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_GuardarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_GuardarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_GuardarContrasena_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarContrasena" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_GuardarContrasena_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_DesbloquearContrasena_InputMessage">
+    <wsdl:part name="parameters" element="tns:DesbloquearContrasena" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_DesbloquearContrasena_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DesbloquearContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUsuarios">
+    <wsdl:operation name="ObtenerUsuariosPaginados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarios/ObtenerUsuariosPaginados" message="tns:IUsuarios_ObtenerUsuariosPaginados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarios/ObtenerUsuariosPaginadosResponse" message="tns:IUsuarios_ObtenerUsuariosPaginados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPerfilesPaginados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarios/ObtenerPerfilesPaginados" message="tns:IUsuarios_ObtenerPerfilesPaginados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarios/ObtenerPerfilesPaginadosResponse" message="tns:IUsuarios_ObtenerPerfilesPaginados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarios/GuardarUsuario" message="tns:IUsuarios_GuardarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarios/GuardarUsuarioResponse" message="tns:IUsuarios_GuardarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarContrasena">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarios/GuardarContrasena" message="tns:IUsuarios_GuardarContrasena_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarios/GuardarContrasenaResponse" message="tns:IUsuarios_GuardarContrasena_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DesbloquearContrasena">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarios/DesbloquearContrasena" message="tns:IUsuarios_DesbloquearContrasena_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarios/DesbloquearContrasenaResponse" message="tns:IUsuarios_DesbloquearContrasena_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUsuarios" type="tns:IUsuarios">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerUsuariosPaginados">
+      <soap:operation soapAction="http://tempuri.org/IUsuarios/ObtenerUsuariosPaginados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPerfilesPaginados">
+      <soap:operation soapAction="http://tempuri.org/IUsuarios/ObtenerPerfilesPaginados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IUsuarios/GuardarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarContrasena">
+      <soap:operation soapAction="http://tempuri.org/IUsuarios/GuardarContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesbloquearContrasena">
+      <soap:operation soapAction="http://tempuri.org/IUsuarios/DesbloquearContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Usuarios">
+    <wsdl:port name="BasicHttpBinding_IUsuarios" binding="tns:BasicHttpBinding_IUsuarios">
+      <soap:address location="http://localhost:17877/Servicios/Usuarios.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

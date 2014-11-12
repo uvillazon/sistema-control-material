@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="KardexMuniciones" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/KardexMuniciones.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/KardexMuniciones.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/KardexMuniciones.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/KardexMuniciones.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/KardexMuniciones.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IKardexMuniciones_ObtenerKardexUnidadPaginados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerKardexUnidadPaginados" />
+  </wsdl:message>
+  <wsdl:message name="IKardexMuniciones_ObtenerKardexUnidadPaginados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerKardexUnidadPaginadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKardexMuniciones_ObtenerKardexPaginados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerKardexPaginados" />
+  </wsdl:message>
+  <wsdl:message name="IKardexMuniciones_ObtenerKardexPaginados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerKardexPaginadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKardexMuniciones_ObtenerMoviminetosMunicionUnidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMoviminetosMunicionUnidad" />
+  </wsdl:message>
+  <wsdl:message name="IKardexMuniciones_ObtenerMoviminetosMunicionUnidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMoviminetosMunicionUnidadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IKardexMuniciones">
+    <wsdl:operation name="ObtenerKardexUnidadPaginados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKardexMuniciones/ObtenerKardexUnidadPaginados" message="tns:IKardexMuniciones_ObtenerKardexUnidadPaginados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKardexMuniciones/ObtenerKardexUnidadPaginadosResponse" message="tns:IKardexMuniciones_ObtenerKardexUnidadPaginados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerKardexPaginados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKardexMuniciones/ObtenerKardexPaginados" message="tns:IKardexMuniciones_ObtenerKardexPaginados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKardexMuniciones/ObtenerKardexPaginadosResponse" message="tns:IKardexMuniciones_ObtenerKardexPaginados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMoviminetosMunicionUnidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKardexMuniciones/ObtenerMoviminetosMunicionUnidad" message="tns:IKardexMuniciones_ObtenerMoviminetosMunicionUnidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKardexMuniciones/ObtenerMoviminetosMunicionUnidadResponse" message="tns:IKardexMuniciones_ObtenerMoviminetosMunicionUnidad_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IKardexMuniciones" type="tns:IKardexMuniciones">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerKardexUnidadPaginados">
+      <soap:operation soapAction="http://tempuri.org/IKardexMuniciones/ObtenerKardexUnidadPaginados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerKardexPaginados">
+      <soap:operation soapAction="http://tempuri.org/IKardexMuniciones/ObtenerKardexPaginados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMoviminetosMunicionUnidad">
+      <soap:operation soapAction="http://tempuri.org/IKardexMuniciones/ObtenerMoviminetosMunicionUnidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="KardexMuniciones">
+    <wsdl:port name="BasicHttpBinding_IKardexMuniciones" binding="tns:BasicHttpBinding_IKardexMuniciones">
+      <soap:address location="http://localhost:17877/Servicios/KardexMuniciones.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

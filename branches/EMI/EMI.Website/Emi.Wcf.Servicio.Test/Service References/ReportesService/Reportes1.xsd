@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfExistenciasModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExistenciasModel" nillable="true" type="tns:ExistenciasModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExistenciasModel" nillable="true" type="tns:ArrayOfExistenciasModel" />
+  <xs:complexType name="ExistenciasModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ALTA" type="xs:int" />
+      <xs:element minOccurs="0" name="BAJAS" type="xs:int" />
+      <xs:element minOccurs="0" name="DETALLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EXISTENCIA_ANTERIOR" type="xs:int" />
+      <xs:element minOccurs="0" name="FECHA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GRUPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_DETALLE" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_UNIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="NOTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERDIDAS" type="xs:int" />
+      <xs:element minOccurs="0" name="UNIDAD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExistenciasModel" nillable="true" type="tns:ExistenciasModel" />
+  <xs:complexType name="ArrayOfDetallePedidoModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetallePedidoModel" nillable="true" type="tns:DetallePedidoModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetallePedidoModel" nillable="true" type="tns:ArrayOfDetallePedidoModel" />
+  <xs:complexType name="DetallePedidoModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CANTIDAD_ENTREGADA" type="xs:int" />
+      <xs:element minOccurs="0" name="CANTIDAD_SOLICITADA" type="xs:int" />
+      <xs:element minOccurs="0" name="CATEGORIA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DETALLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO_DETALLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO_RECEPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_FIN" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_INI" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_PEDIDO" type="xs:int" />
+      <xs:element minOccurs="0" name="UNIDAD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetallePedidoModel" nillable="true" type="tns:DetallePedidoModel" />
+  <xs:complexType name="ArrayOfMatLogisticoModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MatLogisticoModel" nillable="true" type="tns:MatLogisticoModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMatLogisticoModel" nillable="true" type="tns:ArrayOfMatLogisticoModel" />
+  <xs:complexType name="MatLogisticoModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AERONAVE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CICLO_VIDA" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FABRICANTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_DOTACION" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GRUPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HORA_VIDA" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_ITEM_" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_UNIDAD" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NRO_PARTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_SERIE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBSERVACIONES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_COMPONENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UNIDAD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MatLogisticoModel" nillable="true" type="tns:MatLogisticoModel" />
+</xs:schema>

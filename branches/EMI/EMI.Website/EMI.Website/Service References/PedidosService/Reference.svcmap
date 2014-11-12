@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dbe02cc6-3de4-4cc0-b90e-07dcf0810a44" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:17877/Servicios/Pedidos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Pedidos.xsd" MetadataType="Schema" ID="92460dab-fc45-4542-9015-e1f73c46bf15" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd1" />
+    <MetadataFile FileName="Pedidos1.xsd" MetadataType="Schema" ID="47df9fef-c694-45e0-b412-6edba2f779c4" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd3" />
+    <MetadataFile FileName="Pedidos2.xsd" MetadataType="Schema" ID="68ba3137-7cd2-491c-8be3-05ac14856a11" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd2" />
+    <MetadataFile FileName="Pedidos.disco" MetadataType="Disco" ID="f9586f01-3cb3-43a4-8655-59efd5b461ee" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Pedidos.svc?disco" />
+    <MetadataFile FileName="Pedidos3.xsd" MetadataType="Schema" ID="afb06245-bee6-4e67-8f17-e6806ebfed47" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd0" />
+    <MetadataFile FileName="Pedidos4.xsd" MetadataType="Schema" ID="00278ace-e1de-472a-b388-6458ab52387a" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd5" />
+    <MetadataFile FileName="Pedidos5.xsd" MetadataType="Schema" ID="8fa9469a-d2a4-4d3f-9680-df599fe04747" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Pedidos.svc?xsd=xsd4" />
+    <MetadataFile FileName="Pedidos.wsdl" MetadataType="Wsdl" ID="111673a1-a2cf-4ba9-a919-69a74ac12ee2" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Pedidos.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

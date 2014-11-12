@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Reportes" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Reportes.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Reportes.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:17877/Servicios/Reportes.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Aplicacion.Modelo" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReportes_ObtenerExistenciasArmamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerExistenciasArmamento" />
+  </wsdl:message>
+  <wsdl:message name="IReportes_ObtenerExistenciasArmamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerExistenciasArmamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportes_ObtenerExistenciasMuniciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerExistenciasMuniciones" />
+  </wsdl:message>
+  <wsdl:message name="IReportes_ObtenerExistenciasMuniciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerExistenciasMunicionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportes_ObtenerDetallePedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDetallePedido" />
+  </wsdl:message>
+  <wsdl:message name="IReportes_ObtenerDetallePedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDetallePedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportes_ObtenerMaterialesLogisticos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMaterialesLogisticos" />
+  </wsdl:message>
+  <wsdl:message name="IReportes_ObtenerMaterialesLogisticos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMaterialesLogisticosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportes_ObtenerExistenciasMatLogisticos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerExistenciasMatLogisticos" />
+  </wsdl:message>
+  <wsdl:message name="IReportes_ObtenerExistenciasMatLogisticos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerExistenciasMatLogisticosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IReportes">
+    <wsdl:operation name="ObtenerExistenciasArmamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportes/ObtenerExistenciasArmamento" message="tns:IReportes_ObtenerExistenciasArmamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportes/ObtenerExistenciasArmamentoResponse" message="tns:IReportes_ObtenerExistenciasArmamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerExistenciasMuniciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportes/ObtenerExistenciasMuniciones" message="tns:IReportes_ObtenerExistenciasMuniciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportes/ObtenerExistenciasMunicionesResponse" message="tns:IReportes_ObtenerExistenciasMuniciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDetallePedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportes/ObtenerDetallePedido" message="tns:IReportes_ObtenerDetallePedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportes/ObtenerDetallePedidoResponse" message="tns:IReportes_ObtenerDetallePedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMaterialesLogisticos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportes/ObtenerMaterialesLogisticos" message="tns:IReportes_ObtenerMaterialesLogisticos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportes/ObtenerMaterialesLogisticosResponse" message="tns:IReportes_ObtenerMaterialesLogisticos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerExistenciasMatLogisticos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportes/ObtenerExistenciasMatLogisticos" message="tns:IReportes_ObtenerExistenciasMatLogisticos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportes/ObtenerExistenciasMatLogisticosResponse" message="tns:IReportes_ObtenerExistenciasMatLogisticos_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReportes" type="tns:IReportes">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerExistenciasArmamento">
+      <soap:operation soapAction="http://tempuri.org/IReportes/ObtenerExistenciasArmamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerExistenciasMuniciones">
+      <soap:operation soapAction="http://tempuri.org/IReportes/ObtenerExistenciasMuniciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDetallePedido">
+      <soap:operation soapAction="http://tempuri.org/IReportes/ObtenerDetallePedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMaterialesLogisticos">
+      <soap:operation soapAction="http://tempuri.org/IReportes/ObtenerMaterialesLogisticos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerExistenciasMatLogisticos">
+      <soap:operation soapAction="http://tempuri.org/IReportes/ObtenerExistenciasMatLogisticos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Reportes">
+    <wsdl:port name="BasicHttpBinding_IReportes" binding="tns:BasicHttpBinding_IReportes">
+      <soap:address location="http://localhost:17877/Servicios/Reportes.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
