@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7DF2D2B-559C-4290-8FC8-488A994C786E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EMI.Wcf.Model</RootNamespace>
+    <AssemblyName>EMI.Wcf.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BITACORAS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMPONENTES_ITEMS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONTRASENAS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infraestructure\PredicateBuilder.cs" />
+    <Compile Include="PartialMUNICIONES_UNIDADES.cs" />
+    <Compile Include="PartialDETALLES_PEDIDOS.cs" />
+    <Compile Include="PartialPEDIDOS.cs" />
+    <Compile Include="PartialITEMS_MAT_LOGISTICOS.cs" />
+    <Compile Include="PartialMAT_LOGISTICOS.cs" />
+    <Compile Include="PartialMAT_BELICOS.cs" />
+    <Compile Include="DESPACHOS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETALLES_PEDIDOS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HISTORICOS_PEDIDOS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HISTORICO_CMP.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ITEMS_ARMAMENTO.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ITEMS_MAT_LOGISTICOS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ITEMS_VERIFICACIONES.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LISTAS1.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LISTAS_ITEMS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MATERIALES_BELICOS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAT_BELICOS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAT_LOGISTICOS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MENU_OPCIONES.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MOV_MAT_BELICOS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOV_MUNICIONES_UNIDADES.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MUNICIONES_UNIDADES.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PARTES_MAT_BELICOS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PartialITEMS_ARMAMENTO.cs" />
+    <Compile Include="PEDIDOS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERFILES.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERFILES_OPCIONES.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SALIDADES_MUNICIONES.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UNIDADES.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USUARIOS.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Modelo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Modelo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Modelo.edmx</DependentUpon>
+      <LastGenOutput>Modelo.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Modelo.edmx.diagram">
+      <DependentUpon>Modelo.edmx</DependentUpon>
+    </None>
+    <None Include="Modelo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Modelo.edmx</DependentUpon>
+      <LastGenOutput>Modelo.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

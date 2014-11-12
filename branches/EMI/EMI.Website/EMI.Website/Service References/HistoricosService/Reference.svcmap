@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="34c5f5b1-c728-4146-b8ab-946649212a75" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:17877/Servicios/Historicos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Historicos.xsd" MetadataType="Schema" ID="0adcd337-dd85-47af-83bc-01ab6919d0a8" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Historicos.svc?xsd=xsd1" />
+    <MetadataFile FileName="Historicos1.xsd" MetadataType="Schema" ID="bc1cd2da-f822-4ae0-8f9d-7e9364ff826e" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Historicos.svc?xsd=xsd4" />
+    <MetadataFile FileName="Historicos2.xsd" MetadataType="Schema" ID="02ba596f-4fcb-4690-b819-46c004a8fb15" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Historicos.svc?xsd=xsd2" />
+    <MetadataFile FileName="Historicos.wsdl" MetadataType="Wsdl" ID="1ec88603-1070-44a7-a95a-c416711037fe" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Historicos.svc?wsdl" />
+    <MetadataFile FileName="Historicos3.xsd" MetadataType="Schema" ID="92c0e210-0cb5-47fa-8154-e5b645c1e90d" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Historicos.svc?xsd=xsd0" />
+    <MetadataFile FileName="Historicos4.xsd" MetadataType="Schema" ID="84e3c897-fa4e-49ca-9167-2d6ebe2d2f74" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Historicos.svc?xsd=xsd3" />
+    <MetadataFile FileName="Historicos.disco" MetadataType="Disco" ID="4ebced37-f2f2-4b42-bd4e-ab435c560509" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Historicos.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

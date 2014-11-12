@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Servicio.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfArmamentoModelResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArmamentoModelResp" nillable="true" type="tns:ArmamentoModelResp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArmamentoModelResp" nillable="true" type="tns:ArrayOfArmamentoModelResp" />
+  <xs:complexType name="ArmamentoModelResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CALIBRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CANTIDAD_DISPONIBLE" type="xs:int" />
+      <xs:element minOccurs="0" name="CATEGORIA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FABRICACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_BAJA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_DOTACION" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_ITEM" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_BELICO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LOGIN_BAJA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_CANON" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_CIERRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_CORREDERA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_FUSIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBSERVACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBSERVACION_BAJA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UNIDAD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArmamentoModelResp" nillable="true" type="tns:ArmamentoModelResp" />
+  <xs:complexType name="ArrayOfMatBelicoModelResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MatBelicoModelResp" nillable="true" type="tns:MatBelicoModelResp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMatBelicoModelResp" nillable="true" type="tns:ArrayOfMatBelicoModelResp" />
+  <xs:complexType name="MatBelicoModelResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CALIBRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CANTIDAD_DISPONIBLE" type="xs:int" />
+      <xs:element minOccurs="0" name="CATEGORIA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FABRICACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_DOTACION" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_MAT_BELICO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MUNICION_UNIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBSERVACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UNIDAD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MatBelicoModelResp" nillable="true" type="tns:MatBelicoModelResp" />
+  <xs:complexType name="ArrayOfParteArmamentoModelResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParteArmamentoModelResp" nillable="true" type="tns:ParteArmamentoModelResp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParteArmamentoModelResp" nillable="true" type="tns:ArrayOfParteArmamentoModelResp" />
+  <xs:complexType name="ParteArmamentoModelResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ARMAMENTO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_ITEM" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_BELICO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_PARTE" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBRE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParteArmamentoModelResp" nillable="true" type="tns:ParteArmamentoModelResp" />
+  <xs:complexType name="ArrayOfMatLogisticoModelResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MatLogisticoModelResp" nillable="true" type="tns:MatLogisticoModelResp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMatLogisticoModelResp" nillable="true" type="tns:ArrayOfMatLogisticoModelResp" />
+  <xs:complexType name="MatLogisticoModelResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AERONAVE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CANTIDAD_DISPONIBLE" type="xs:int" />
+      <xs:element minOccurs="0" name="CICLO_VIDA" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FABRICANTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_DOTACION" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GRUPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HORA_VIDA" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_ITEM" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_LOGISTICO" type="xs:int" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_PARTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_SERIE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_COMPONENTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UNIDAD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MatLogisticoModelResp" nillable="true" type="tns:MatLogisticoModelResp" />
+  <xs:complexType name="ArrayOfHistoricoCmpModelResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistoricoCmpModelResp" nillable="true" type="tns:HistoricoCmpModelResp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistoricoCmpModelResp" nillable="true" type="tns:ArrayOfHistoricoCmpModelResp" />
+  <xs:complexType name="HistoricoCmpModelResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CMP_ALTA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CMP_BAJA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NRO_SERIE_NO_OPERABLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_SERIE_OPERABLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USR" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistoricoCmpModelResp" nillable="true" type="tns:HistoricoCmpModelResp" />
+</xs:schema>

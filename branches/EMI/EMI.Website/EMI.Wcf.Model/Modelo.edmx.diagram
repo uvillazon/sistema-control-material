@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d3f040a3279545fa8baac7875607f19b" Name="Diagrama1" ZoomLevel="67">
+        <EntityTypeShape EntityType="EmiModel.PERFILES" Width="1.5" PointX="5.75" PointY="3" />
+        <EntityTypeShape EntityType="EmiModel.USUARIOS" Width="1.5" PointX="3.5" PointY="3" />
+        <AssociationConnector Association="EmiModel.FK_USUARIOS_PERFILES" />
+        <EntityTypeShape EntityType="EmiModel.MENU_OPCIONES" Width="1.875" PointX="10.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmiModel.PERFILES_OPCIONES" Width="1.875" PointX="7.875" PointY="3" />
+        <AssociationConnector Association="EmiModel.FK_PERFILES_OPCIONES_MENU_OPCIONES1" />
+        <AssociationConnector Association="EmiModel.FK_PERFILES_OPCIONES_PERFILES" />
+        <EntityTypeShape EntityType="EmiModel.MATERIALES_BELICOS" Width="2" PointX="3.375" PointY="7.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="EmiModel.COMPONENTES_ITEMS" Width="1.5" PointX="11.25" PointY="9.125" />
+        <EntityTypeShape EntityType="EmiModel.DETALLES_PEDIDOS" Width="1.5" PointX="17.25" PointY="12.125" />
+        <EntityTypeShape EntityType="EmiModel.HISTORICO_CMP" Width="1.5" PointX="20.25" PointY="13.625" />
+        <EntityTypeShape EntityType="EmiModel.HISTORICOS_PEDIDOS" Width="1.5" PointX="2.75" PointY="15.125" />
+        <EntityTypeShape EntityType="EmiModel.ITEMS_VERIFICACIONES" Width="1.5" PointX="11.25" PointY="19.625" />
+        <EntityTypeShape EntityType="EmiModel.MAT_LOGISTICOS" Width="1.5" PointX="20.25" PointY="24.125" />
+        <EntityTypeShape EntityType="EmiModel.MOV_MAT_BELICOS" Width="1.5" PointX="2.75" PointY="25.625" />
+        <EntityTypeShape EntityType="EmiModel.MOV_MUNICIONES_UNIDADES" Width="1.5" PointX="5.25" PointY="27.125" />
+        <EntityTypeShape EntityType="EmiModel.MUNICIONES_UNIDADES" Width="1.5" PointX="8.25" PointY="28.625" />
+        <EntityTypeShape EntityType="EmiModel.PARTES_MAT_BELICOS" Width="1.5" PointX="11.25" PointY="30.125" />
+        <EntityTypeShape EntityType="EmiModel.PEDIDOS" Width="1.5" PointX="14.25" PointY="31.625" />
+        <EntityTypeShape EntityType="EmiModel.SALIDADES_MUNICIONES" Width="1.5" PointX="17.25" PointY="33.125" />
+        <EntityTypeShape EntityType="EmiModel.UNIDADES" Width="1.5" PointX="21" PointY="34.25" />
+        <AssociationConnector Association="EmiModel.FK_DETALLES_PEDIDOS_MAT_LOGISTICOS" />
+        <AssociationConnector Association="EmiModel.FK_DETALLES_PEDIDOS_PEDIDOS" />
+        <AssociationConnector Association="EmiModel.FK_HISTORICOS_PEDIDOS_PEDIDOS" />
+        <AssociationConnector Association="EmiModel.FK_MOV_MUNICIONES_UNIDADES_MUNICIONES_UNIDADES" />
+        <AssociationConnector Association="EmiModel.FK_MUNICIONES_UNIDADES_UNIDADES" />
+        <AssociationConnector Association="EmiModel.FK_SALIDADES_MUNICIONES_MUNICIONES_UNIDADES" />
+        <AssociationConnector Association="EmiModel.FK_PEDIDOS_UNIDADES" />
+        <AssociationConnector Association="EmiModel.FK_PERFILES_UNIDADES" />
+        <EntityTypeShape EntityType="EmiModel.LISTAS1" Width="1.5" PointX="0.2201429923158805" PointY="12.346789619115549" />
+        <EntityTypeShape EntityType="EmiModel.ITEMS_ARMAMENTO" Width="1.5" PointX="11.626906066959215" PointY="27.366431010592" />
+        <AssociationConnector Association="EmiModel.FK_COMPONENTES_ITEMS_ITEMS_ARMAMENTO" />
+        <AssociationConnector Association="EmiModel.FK_HISTORICO_CMP_ITEMS_ARMAMENTO" />
+        <AssociationConnector Association="EmiModel.FK_HISTORICO_CMP_ITEMS_ARMAMENTO1" />
+        <AssociationConnector Association="EmiModel.FK_ITEMS_ARMAMENTO_UNIDADES" />
+        <EntityTypeShape EntityType="EmiModel.LISTAS_ITEMS" Width="1.5" PointX="8.010595107456016" PointY="14.456058419521925" />
+        <AssociationConnector Association="EmiModel.FK_LISTAS_ITEMS_LISTAS" />
+        <AssociationConnector Association="EmiModel.FK_LISTAS_ITEMS_LISTAS_ITEMS" />
+        <EntityTypeShape EntityType="EmiModel.MAT_BELICOS" Width="1.5" PointX="0.89423934411920569" PointY="25.091266971589658" />
+        <AssociationConnector Association="EmiModel.FK_DETALLES_PEDIDOS_MAT_BELICOS" />
+        <AssociationConnector Association="EmiModel.FK_ITEMS_ARMAMENTO_MAT_BELICOS" />
+        <AssociationConnector Association="EmiModel.FK_MOV_MAT_BELICOS_MAT_BELICOS" />
+        <AssociationConnector Association="EmiModel.FK_MUNICIONES_UNIDADES_MAT_BELICOS" />
+        <AssociationConnector Association="EmiModel.FK_PARTES_MAT_BELICOS_MAT_BELICOS" />
+        <EntityTypeShape EntityType="EmiModel.ITEMS_MAT_LOGISTICOS" Width="1.5" PointX="9.25" PointY="35" />
+        <AssociationConnector Association="EmiModel.FK_ITEMS_MAT_LOGISTICOS_MAT_LOGISTICOS" />
+        <AssociationConnector Association="EmiModel.FK_ITEMS_MAT_LOGISTICOS_UNIDADES" />
+        <AssociationConnector Association="EmiModel.FK_ITEMS_VERIFICACIONES_ITEMS_MAT_LOGISTICOS" />
+        <EntityTypeShape EntityType="EmiModel.DESPACHOS" Width="1.5" PointX="6.125" PointY="34.25" />
+        <AssociationConnector Association="EmiModel.FK_DESPACHOS_DETALLES_PEDIDOS" />
+        <AssociationConnector Association="EmiModel.FK_DESPACHOS_ITEMS_ARMAMENTO" />
+        <AssociationConnector Association="EmiModel.FK_DESPACHOS_ITEMS_MAT_LOGISTICOS1" />
+        <EntityTypeShape EntityType="EmiModel.CONTRASENAS" Width="1.5" PointX="1.25" PointY="3.375" />
+        <AssociationConnector Association="EmiModel.FK_CONTRASENAS_USUARIOS" />
+        <EntityTypeShape EntityType="EmiModel.BITACORAS" Width="1.5" PointX="23.875" PointY="16" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a719c595-de0e-4775-876f-7371fc340eff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.0.8/WCF/Servicios/MaterialesBelicosLogisticos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MaterialesBelicosLogisticos.disco" MetadataType="Disco" ID="54933ba2-a420-4122-a688-4eea044cbca3" SourceId="1" SourceUrl="http://10.0.0.8/WCF/Servicios/MaterialesBelicosLogisticos.svc?disco" />
+    <MetadataFile FileName="MaterialesBelicosLogisticos.xsd" MetadataType="Schema" ID="f36a6422-f286-49d7-9d8b-3843da129242" SourceId="1" SourceUrl="http://10.0.0.8/WCF/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd5" />
+    <MetadataFile FileName="MaterialesBelicosLogisticos1.xsd" MetadataType="Schema" ID="bad17053-1d72-48bc-ae45-88bd7a5ff7b3" SourceId="1" SourceUrl="http://10.0.0.8/WCF/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd4" />
+    <MetadataFile FileName="MaterialesBelicosLogisticos2.xsd" MetadataType="Schema" ID="c6473a43-b718-48ad-af22-4928856d0e1a" SourceId="1" SourceUrl="http://10.0.0.8/WCF/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd1" />
+    <MetadataFile FileName="MaterialesBelicosLogisticos3.xsd" MetadataType="Schema" ID="b588fe02-001e-44c4-8ce5-1d76f349aa85" SourceId="1" SourceUrl="http://10.0.0.8/WCF/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd0" />
+    <MetadataFile FileName="MaterialesBelicosLogisticos4.xsd" MetadataType="Schema" ID="0f660476-eefc-46b7-8d53-c0ac3f49356c" SourceId="1" SourceUrl="http://10.0.0.8/WCF/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd3" />
+    <MetadataFile FileName="MaterialesBelicosLogisticos5.xsd" MetadataType="Schema" ID="1de1c9be-5c5c-434b-b567-64360c4039c2" SourceId="1" SourceUrl="http://10.0.0.8/WCF/Servicios/MaterialesBelicosLogisticos.svc?xsd=xsd2" />
+    <MetadataFile FileName="MaterialesBelicosLogisticos.wsdl" MetadataType="Wsdl" ID="cb2f796b-8f51-4051-b95e-fc990c2088b5" SourceId="1" SourceUrl="http://10.0.0.8/WCF/Servicios/MaterialesBelicosLogisticos.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

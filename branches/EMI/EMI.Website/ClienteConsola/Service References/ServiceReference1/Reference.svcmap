@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b93fa75e-d92e-47b9-a679-7b937604fb0e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:17877/Servicios/Tablas.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Tablas.xsd" MetadataType="Schema" ID="3e82d7a2-a860-43db-89ae-6ec14e8830fd" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Tablas.svc?xsd=xsd2" />
+    <MetadataFile FileName="Tablas.wsdl" MetadataType="Wsdl" ID="6dd09668-54e9-4b64-80e8-640c36442c3e" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Tablas.svc?wsdl" />
+    <MetadataFile FileName="Tablas.disco" MetadataType="Disco" ID="24e6b875-6863-474a-b7fd-c1f7964a168f" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Tablas.svc?disco" />
+    <MetadataFile FileName="Tablas1.xsd" MetadataType="Schema" ID="76921aff-4396-4b31-aa47-bd407b8b8267" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Tablas.svc?xsd=xsd1" />
+    <MetadataFile FileName="Tablas2.xsd" MetadataType="Schema" ID="7e735607-38d7-4b70-b366-c17afacc2735" SourceId="1" SourceUrl="http://localhost:17877/Servicios/Tablas.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

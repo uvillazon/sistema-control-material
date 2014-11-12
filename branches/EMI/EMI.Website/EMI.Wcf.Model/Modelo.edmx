@@ -1,0 +1,2109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EmiModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="EmiModelStoreContainer">
+          <EntitySet Name="BITACORAS" EntityType="EmiModel.Store.BITACORAS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="COMPONENTES_ITEMS" EntityType="EmiModel.Store.COMPONENTES_ITEMS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CONTRASENAS" EntityType="EmiModel.Store.CONTRASENAS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DESPACHOS" EntityType="EmiModel.Store.DESPACHOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DETALLES_PEDIDOS" EntityType="EmiModel.Store.DETALLES_PEDIDOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HISTORICO_CMP" EntityType="EmiModel.Store.HISTORICO_CMP" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HISTORICOS_PEDIDOS" EntityType="EmiModel.Store.HISTORICOS_PEDIDOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ITEMS_ARMAMENTO" EntityType="EmiModel.Store.ITEMS_ARMAMENTO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ITEMS_MAT_LOGISTICOS" EntityType="EmiModel.Store.ITEMS_MAT_LOGISTICOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ITEMS_VERIFICACIONES" EntityType="EmiModel.Store.ITEMS_VERIFICACIONES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LISTAS_ITEMS" EntityType="EmiModel.Store.LISTAS_ITEMS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LISTAS1" EntityType="EmiModel.Store.LISTAS1" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MAT_BELICOS" EntityType="EmiModel.Store.MAT_BELICOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MAT_LOGISTICOS" EntityType="EmiModel.Store.MAT_LOGISTICOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MATERIALES_BELICOS" EntityType="EmiModel.Store.MATERIALES_BELICOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MENU_OPCIONES" EntityType="EmiModel.Store.MENU_OPCIONES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MOV_MAT_BELICOS" EntityType="EmiModel.Store.MOV_MAT_BELICOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MOV_MUNICIONES_UNIDADES" EntityType="EmiModel.Store.MOV_MUNICIONES_UNIDADES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MUNICIONES_UNIDADES" EntityType="EmiModel.Store.MUNICIONES_UNIDADES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PARTES_MAT_BELICOS" EntityType="EmiModel.Store.PARTES_MAT_BELICOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PEDIDOS" EntityType="EmiModel.Store.PEDIDOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PERFILES" EntityType="EmiModel.Store.PERFILES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PERFILES_OPCIONES" EntityType="EmiModel.Store.PERFILES_OPCIONES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SALIDADES_MUNICIONES" EntityType="EmiModel.Store.SALIDADES_MUNICIONES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="EmiModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TABLAS" EntityType="EmiModel.Store.TABLAS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UNIDADES" EntityType="EmiModel.Store.UNIDADES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USUARIOS" EntityType="EmiModel.Store.USUARIOS" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_COMPONENTES_ITEMS_ITEMS_ARMAMENTO" Association="EmiModel.Store.FK_COMPONENTES_ITEMS_ITEMS_ARMAMENTO">
+            <End Role="ITEMS_ARMAMENTO" EntitySet="ITEMS_ARMAMENTO" />
+            <End Role="COMPONENTES_ITEMS" EntitySet="COMPONENTES_ITEMS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CONTRASENAS_USUARIOS" Association="EmiModel.Store.FK_CONTRASENAS_USUARIOS">
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+            <End Role="CONTRASENAS" EntitySet="CONTRASENAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DESPACHOS_DETALLES_PEDIDOS" Association="EmiModel.Store.FK_DESPACHOS_DETALLES_PEDIDOS">
+            <End Role="DETALLES_PEDIDOS" EntitySet="DETALLES_PEDIDOS" />
+            <End Role="DESPACHOS" EntitySet="DESPACHOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DESPACHOS_ITEMS_ARMAMENTO" Association="EmiModel.Store.FK_DESPACHOS_ITEMS_ARMAMENTO">
+            <End Role="ITEMS_ARMAMENTO" EntitySet="ITEMS_ARMAMENTO" />
+            <End Role="DESPACHOS" EntitySet="DESPACHOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DESPACHOS_ITEMS_MAT_LOGISTICOS1" Association="EmiModel.Store.FK_DESPACHOS_ITEMS_MAT_LOGISTICOS1">
+            <End Role="ITEMS_MAT_LOGISTICOS" EntitySet="ITEMS_MAT_LOGISTICOS" />
+            <End Role="DESPACHOS" EntitySet="DESPACHOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLES_PEDIDOS_MAT_BELICOS" Association="EmiModel.Store.FK_DETALLES_PEDIDOS_MAT_BELICOS">
+            <End Role="MAT_BELICOS" EntitySet="MAT_BELICOS" />
+            <End Role="DETALLES_PEDIDOS" EntitySet="DETALLES_PEDIDOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLES_PEDIDOS_MAT_LOGISTICOS" Association="EmiModel.Store.FK_DETALLES_PEDIDOS_MAT_LOGISTICOS">
+            <End Role="MAT_LOGISTICOS" EntitySet="MAT_LOGISTICOS" />
+            <End Role="DETALLES_PEDIDOS" EntitySet="DETALLES_PEDIDOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLES_PEDIDOS_PEDIDOS" Association="EmiModel.Store.FK_DETALLES_PEDIDOS_PEDIDOS">
+            <End Role="PEDIDOS" EntitySet="PEDIDOS" />
+            <End Role="DETALLES_PEDIDOS" EntitySet="DETALLES_PEDIDOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HISTORICO_CMP_ITEMS_ARMAMENTO" Association="EmiModel.Store.FK_HISTORICO_CMP_ITEMS_ARMAMENTO">
+            <End Role="ITEMS_ARMAMENTO" EntitySet="ITEMS_ARMAMENTO" />
+            <End Role="HISTORICO_CMP" EntitySet="HISTORICO_CMP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HISTORICO_CMP_ITEMS_ARMAMENTO1" Association="EmiModel.Store.FK_HISTORICO_CMP_ITEMS_ARMAMENTO1">
+            <End Role="ITEMS_ARMAMENTO" EntitySet="ITEMS_ARMAMENTO" />
+            <End Role="HISTORICO_CMP" EntitySet="HISTORICO_CMP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HISTORICOS_PEDIDOS_PEDIDOS" Association="EmiModel.Store.FK_HISTORICOS_PEDIDOS_PEDIDOS">
+            <End Role="PEDIDOS" EntitySet="PEDIDOS" />
+            <End Role="HISTORICOS_PEDIDOS" EntitySet="HISTORICOS_PEDIDOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITEMS_ARMAMENTO_MAT_BELICOS" Association="EmiModel.Store.FK_ITEMS_ARMAMENTO_MAT_BELICOS">
+            <End Role="MAT_BELICOS" EntitySet="MAT_BELICOS" />
+            <End Role="ITEMS_ARMAMENTO" EntitySet="ITEMS_ARMAMENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITEMS_ARMAMENTO_UNIDADES" Association="EmiModel.Store.FK_ITEMS_ARMAMENTO_UNIDADES">
+            <End Role="UNIDADES" EntitySet="UNIDADES" />
+            <End Role="ITEMS_ARMAMENTO" EntitySet="ITEMS_ARMAMENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITEMS_MAT_LOGISTICOS_MAT_LOGISTICOS" Association="EmiModel.Store.FK_ITEMS_MAT_LOGISTICOS_MAT_LOGISTICOS">
+            <End Role="MAT_LOGISTICOS" EntitySet="MAT_LOGISTICOS" />
+            <End Role="ITEMS_MAT_LOGISTICOS" EntitySet="ITEMS_MAT_LOGISTICOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITEMS_MAT_LOGISTICOS_UNIDADES" Association="EmiModel.Store.FK_ITEMS_MAT_LOGISTICOS_UNIDADES">
+            <End Role="UNIDADES" EntitySet="UNIDADES" />
+            <End Role="ITEMS_MAT_LOGISTICOS" EntitySet="ITEMS_MAT_LOGISTICOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITEMS_VERIFICACIONES_ITEMS_MAT_LOGISTICOS" Association="EmiModel.Store.FK_ITEMS_VERIFICACIONES_ITEMS_MAT_LOGISTICOS">
+            <End Role="ITEMS_MAT_LOGISTICOS" EntitySet="ITEMS_MAT_LOGISTICOS" />
+            <End Role="ITEMS_VERIFICACIONES" EntitySet="ITEMS_VERIFICACIONES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LISTAS_ITEMS_LISTAS" Association="EmiModel.Store.FK_LISTAS_ITEMS_LISTAS">
+            <End Role="LISTAS1" EntitySet="LISTAS1" />
+            <End Role="LISTAS_ITEMS" EntitySet="LISTAS_ITEMS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LISTAS_ITEMS_LISTAS_ITEMS" Association="EmiModel.Store.FK_LISTAS_ITEMS_LISTAS_ITEMS">
+            <End Role="LISTAS_ITEMS" EntitySet="LISTAS_ITEMS" />
+            <End Role="LISTAS_ITEMS1" EntitySet="LISTAS_ITEMS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOV_MAT_BELICOS_MAT_BELICOS" Association="EmiModel.Store.FK_MOV_MAT_BELICOS_MAT_BELICOS">
+            <End Role="MAT_BELICOS" EntitySet="MAT_BELICOS" />
+            <End Role="MOV_MAT_BELICOS" EntitySet="MOV_MAT_BELICOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOV_MUNICIONES_UNIDADES_MUNICIONES_UNIDADES" Association="EmiModel.Store.FK_MOV_MUNICIONES_UNIDADES_MUNICIONES_UNIDADES">
+            <End Role="MUNICIONES_UNIDADES" EntitySet="MUNICIONES_UNIDADES" />
+            <End Role="MOV_MUNICIONES_UNIDADES" EntitySet="MOV_MUNICIONES_UNIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MUNICIONES_UNIDADES_MAT_BELICOS" Association="EmiModel.Store.FK_MUNICIONES_UNIDADES_MAT_BELICOS">
+            <End Role="MAT_BELICOS" EntitySet="MAT_BELICOS" />
+            <End Role="MUNICIONES_UNIDADES" EntitySet="MUNICIONES_UNIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MUNICIONES_UNIDADES_UNIDADES" Association="EmiModel.Store.FK_MUNICIONES_UNIDADES_UNIDADES">
+            <End Role="UNIDADES" EntitySet="UNIDADES" />
+            <End Role="MUNICIONES_UNIDADES" EntitySet="MUNICIONES_UNIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PARTES_MAT_BELICOS_MAT_BELICOS" Association="EmiModel.Store.FK_PARTES_MAT_BELICOS_MAT_BELICOS">
+            <End Role="MAT_BELICOS" EntitySet="MAT_BELICOS" />
+            <End Role="PARTES_MAT_BELICOS" EntitySet="PARTES_MAT_BELICOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PEDIDOS_UNIDADES" Association="EmiModel.Store.FK_PEDIDOS_UNIDADES">
+            <End Role="UNIDADES" EntitySet="UNIDADES" />
+            <End Role="PEDIDOS" EntitySet="PEDIDOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERFILES_OPCIONES_MENU_OPCIONES1" Association="EmiModel.Store.FK_PERFILES_OPCIONES_MENU_OPCIONES1">
+            <End Role="MENU_OPCIONES" EntitySet="MENU_OPCIONES" />
+            <End Role="PERFILES_OPCIONES" EntitySet="PERFILES_OPCIONES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERFILES_OPCIONES_PERFILES" Association="EmiModel.Store.FK_PERFILES_OPCIONES_PERFILES">
+            <End Role="PERFILES" EntitySet="PERFILES" />
+            <End Role="PERFILES_OPCIONES" EntitySet="PERFILES_OPCIONES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERFILES_UNIDADES" Association="EmiModel.Store.FK_PERFILES_UNIDADES">
+            <End Role="UNIDADES" EntitySet="UNIDADES" />
+            <End Role="PERFILES" EntitySet="PERFILES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SALIDADES_MUNICIONES_MUNICIONES_UNIDADES" Association="EmiModel.Store.FK_SALIDADES_MUNICIONES_MUNICIONES_UNIDADES">
+            <End Role="MUNICIONES_UNIDADES" EntitySet="MUNICIONES_UNIDADES" />
+            <End Role="SALIDADES_MUNICIONES" EntitySet="SALIDADES_MUNICIONES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USUARIOS_PERFILES" Association="EmiModel.Store.FK_USUARIOS_PERFILES">
+            <End Role="PERFILES" EntitySet="PERFILES" />
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BITACORAS">
+          <Key>
+            <PropertyRef Name="ID_HIST" />
+          </Key>
+          <Property Name="ID_HIST" Type="int" Nullable="false" />
+          <Property Name="TABLA" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ID_TABLA" Type="int" Nullable="false" />
+          <Property Name="COLUMNA" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="VALOR" Type="varchar" MaxLength="1024" />
+          <Property Name="LOGIN" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FECHA" Type="datetime" Nullable="false" />
+          <Property Name="ACCION" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="COMPONENTES_ITEMS">
+          <Key>
+            <PropertyRef Name="ID_CMP" />
+          </Key>
+          <Property Name="ID_CMP" Type="int" Nullable="false" />
+          <Property Name="ID_ITEM" Type="int" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CODIGO" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CONTRASENAS">
+          <Key>
+            <PropertyRef Name="ID_CONTRASENA" />
+          </Key>
+          <Property Name="ID_CONTRASENA" Type="int" Nullable="false" />
+          <Property Name="ID_USUARIO" Type="int" Nullable="false" />
+          <Property Name="CONTRASENA" Type="varchar" Nullable="false" MaxLength="550" />
+          <Property Name="FECHA_ALTA" Type="date" Nullable="false" />
+          <Property Name="FECHA_EXPIRACION" Type="date" Nullable="false" />
+          <Property Name="ESTADO" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="NRO_FALLIDO" Type="int" Nullable="false" />
+          <Property Name="FECHA_BLOQUEO" Type="date" />
+        </EntityType>
+        <EntityType Name="DESPACHOS">
+          <Key>
+            <PropertyRef Name="ID_DESPACHO" />
+          </Key>
+          <Property Name="ID_DESPACHO" Type="int" Nullable="false" />
+          <Property Name="ID_DETALLE" Type="int" Nullable="false" />
+          <Property Name="CANTIDAD_ENTREGADA" Type="int" Nullable="false" />
+          <Property Name="SALDO" Type="int" Nullable="false" />
+          <Property Name="LOGIN" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FECHA" Type="date" Nullable="false" />
+          <Property Name="FECHA_REG" Type="datetime" Nullable="false" />
+          <Property Name="ID_ITEM_ARMAMENTO" Type="int" />
+          <Property Name="ID_ITEM_LOGISTICO" Type="int" />
+          <Property Name="ESTADO" Type="varchar" MaxLength="50" />
+          <Property Name="LOGIN_RECEP" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DETALLES_PEDIDOS">
+          <Key>
+            <PropertyRef Name="ID_DETALLE" />
+          </Key>
+          <Property Name="ID_DETALLE" Type="int" Nullable="false" />
+          <Property Name="ID_PEDIDO" Type="int" Nullable="false" />
+          <Property Name="ID_MAT_BELICO" Type="int" />
+          <Property Name="ID_MAT_LOGISTICO" Type="int" />
+          <Property Name="CANTIDAD_SOLICITADA" Type="int" Nullable="false" />
+          <Property Name="CANTIDAD_ENTREGADA" Type="int" />
+          <Property Name="ESTADO" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HISTORICO_CMP">
+          <Key>
+            <PropertyRef Name="ID_HIST" />
+          </Key>
+          <Property Name="ID_HIST" Type="int" Nullable="false" />
+          <Property Name="FECHA" Type="date" Nullable="false" />
+          <Property Name="ID_ITEM_OPERABLE" Type="int" Nullable="false" />
+          <Property Name="CMP_OPERABLE" Type="varchar" MaxLength="50" />
+          <Property Name="ID_ITEM_NO_OPERABLE" Type="int" Nullable="false" />
+          <Property Name="CMP_NO_OPERABLE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="OBSERVACION" Type="nchar" MaxLength="10" />
+          <Property Name="LOGIN" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HISTORICOS_PEDIDOS">
+          <Key>
+            <PropertyRef Name="ID_HIST" />
+          </Key>
+          <Property Name="ID_HIST" Type="int" Nullable="false" />
+          <Property Name="ID_PEDIDO" Type="int" Nullable="false" />
+          <Property Name="ESTADO" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="OBSERVACION" Type="varchar" MaxLength="250" />
+          <Property Name="FECHA" Type="date" Nullable="false" />
+          <Property Name="LOGIN" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ITEMS_ARMAMENTO">
+          <Key>
+            <PropertyRef Name="ID_ITEM" />
+          </Key>
+          <Property Name="ID_ITEM" Type="int" Nullable="false" />
+          <Property Name="ID_MAT_BELICO" Type="int" />
+          <Property Name="NRO_FUSIL" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FECHA_BAJA" Type="date" />
+          <Property Name="OBSERVACION_BAJA" Type="varchar" MaxLength="150" />
+          <Property Name="FECHA_REG" Type="datetime" />
+          <Property Name="ID_UNIDAD" Type="int" />
+          <Property Name="LOGIN" Type="varchar" MaxLength="50" />
+          <Property Name="ESTADO" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LOGIN_BAJA" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ITEMS_MAT_LOGISTICOS">
+          <Key>
+            <PropertyRef Name="ID_ITEM" />
+          </Key>
+          <Property Name="ID_ITEM" Type="int" Nullable="false" />
+          <Property Name="ID_MAT_LOGISTICO" Type="int" />
+          <Property Name="NRO_SERIE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FECHA_BAJA" Type="date" />
+          <Property Name="OBSERVACION_BAJA" Type="varchar" MaxLength="150" />
+          <Property Name="ID_UNIDAD" Type="int" />
+          <Property Name="FECHA_REG" Type="datetime" />
+          <Property Name="LOGIN" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LOGIN_BAJA" Type="varchar" MaxLength="50" />
+          <Property Name="ESTADO" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ITEMS_VERIFICACIONES">
+          <Key>
+            <PropertyRef Name="ID_VERIFICACION" />
+          </Key>
+          <Property Name="ID_VERIFICACION" Type="int" Nullable="false" />
+          <Property Name="ID_ITEM" Type="int" Nullable="false" />
+          <Property Name="VALOR_NUEVO" Type="varchar" MaxLength="50" />
+          <Property Name="VALOR_ANTERIOR" Type="varchar" MaxLength="50" />
+          <Property Name="LOGIN" Type="varchar" MaxLength="50" />
+          <Property Name="FECHA" Type="date" />
+          <Property Name="FECHA_REG" Type="datetime" Nullable="false" />
+          <Property Name="OBSERVACION" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="LISTAS_ITEMS">
+          <Key>
+            <PropertyRef Name="ID_TABLA" />
+          </Key>
+          <Property Name="ID_TABLA" Type="int" Nullable="false" />
+          <Property Name="ID_PADRE" Type="int" />
+          <Property Name="ID_LISTA" Type="int" Nullable="false" />
+          <Property Name="CODIGO" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="VALOR" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="ESTADO" Type="nchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="LISTAS1">
+          <Key>
+            <PropertyRef Name="ID_LISTA" />
+          </Key>
+          <Property Name="ID_LISTA" Type="int" Nullable="false" />
+          <Property Name="LISTA" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DESCRIPCION" Type="varchar" MaxLength="250" />
+          <Property Name="TAM_LIMITE" Type="int" Nullable="false" />
+          <Property Name="TIPO_VALOR" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MAYUS_MINUS" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ESTADO" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="MAT_BELICOS">
+          <Key>
+            <PropertyRef Name="ID_MAT_BELICO" />
+          </Key>
+          <Property Name="ID_MAT_BELICO" Type="int" Nullable="false" />
+          <Property Name="CODIGO" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FABRICACION" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="CALIBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CATEGORIA" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="150" />
+          <Property Name="CANTIDAD_DISPONIBLE" Type="int" />
+          <Property Name="FECHA_DOTACION" Type="date" Nullable="false" />
+          <Property Name="OBSERVACION" Type="varchar" MaxLength="250" />
+          <Property Name="FECHA_REG" Type="datetime" Nullable="false" />
+          <Property Name="LOGIN" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TIPO" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MAT_LOGISTICOS">
+          <Key>
+            <PropertyRef Name="ID_MAT_LOGISTICO" />
+          </Key>
+          <Property Name="ID_MAT_LOGISTICO" Type="int" Nullable="false" />
+          <Property Name="CODIGO" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FABRICANTE" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="TIPO_COMPONENTE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AERONAVE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="GRUPO" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="NRO_PARTE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ESTADO" Type="varchar" MaxLength="50" />
+          <Property Name="CICLO_VIDA" Type="int" />
+          <Property Name="HORA_VIDA" Type="int" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="FECHA_DOTACION" Type="date" Nullable="false" />
+          <Property Name="FECHA_REG" Type="datetime" />
+          <Property Name="LOGIN" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MATERIALES_BELICOS">
+          <Key>
+            <PropertyRef Name="ID_MATERIAL" />
+          </Key>
+          <Property Name="ID_MATERIAL" Type="int" Nullable="false" />
+          <Property Name="CODIGO_MATERIAL" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ARMAMENTO" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CALIBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ESTADO" Type="nchar" Nullable="false" MaxLength="15" />
+          <Property Name="FABRICACION" Type="nchar" Nullable="false" MaxLength="15" />
+          <Property Name="FECHA_DOTACION" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_MODIFICACION" Type="datetime" />
+          <Property Name="UNIDAD" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="MENU_OPCIONES">
+          <Key>
+            <PropertyRef Name="ID_MENU" />
+          </Key>
+          <Property Name="ID_MENU" Type="int" Nullable="false" />
+          <Property Name="MENU" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CLASE" Type="varchar" MaxLength="50" />
+          <Property Name="TOOLTIP" Type="varchar" MaxLength="50" />
+          <Property Name="ICONCCS" Type="varchar" MaxLength="50" />
+          <Property Name="ID_PADRE" Type="int" />
+          <Property Name="ESTADO" Type="varchar" Nullable="false" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="MOV_MAT_BELICOS">
+          <Key>
+            <PropertyRef Name="ID_MOV" />
+          </Key>
+          <Property Name="ID_MOV" Type="int" Nullable="false" />
+          <Property Name="FECHA" Type="date" Nullable="false" />
+          <Property Name="ID_MAT_BELICO" Type="int" Nullable="false" />
+          <Property Name="ENTRADA" Type="int" Nullable="false" />
+          <Property Name="SALIDA" Type="int" Nullable="false" />
+          <Property Name="SALDO" Type="int" Nullable="false" />
+          <Property Name="OPERACION" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID_OPERACION" Type="int" Nullable="false" />
+          <Property Name="LOGIN" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MOV_MUNICIONES_UNIDADES">
+          <Key>
+            <PropertyRef Name="ID_MOV" />
+          </Key>
+          <Property Name="ID_MOV" Type="int" Nullable="false" />
+          <Property Name="FECHA" Type="date" Nullable="false" />
+          <Property Name="ID_MUNICION_UNIDAD" Type="int" Nullable="false" />
+          <Property Name="ENTRADA" Type="int" Nullable="false" />
+          <Property Name="SALIDA" Type="int" Nullable="false" />
+          <Property Name="SALDO" Type="int" Nullable="false" />
+          <Property Name="OPERACION" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID_OPERACION" Type="int" Nullable="false" />
+          <Property Name="LOGIN" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MUNICIONES_UNIDADES">
+          <Key>
+            <PropertyRef Name="ID_MUNICION_UNIDAD" />
+          </Key>
+          <Property Name="ID_MUNICION_UNIDAD" Type="int" Nullable="false" />
+          <Property Name="ID_MAT_BELICO" Type="int" Nullable="false" />
+          <Property Name="ID_UNIDAD" Type="int" Nullable="false" />
+          <Property Name="CANTIDAD_DISPONIBLE" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PARTES_MAT_BELICOS">
+          <Key>
+            <PropertyRef Name="ID_PARTE" />
+          </Key>
+          <Property Name="ID_PARTE" Type="int" Nullable="false" />
+          <Property Name="ID_MAT_BELICO" Type="int" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DESCRIPCION" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="PEDIDOS">
+          <Key>
+            <PropertyRef Name="ID_PEDIDO" />
+          </Key>
+          <Property Name="ID_PEDIDO" Type="int" Nullable="false" />
+          <Property Name="NRO_PEDIDO" Type="int" Nullable="false" />
+          <Property Name="TIPO" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID_UNIDAD" Type="int" Nullable="false" />
+          <Property Name="FECHA_PEDIDO" Type="date" Nullable="false" />
+          <Property Name="OBSERVACIONES" Type="varchar" MaxLength="250" />
+          <Property Name="LOGIN" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FECHA_REG" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_MODIF" Type="date" />
+          <Property Name="ESTADO" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PERFILES">
+          <Key>
+            <PropertyRef Name="ID_PERFIL" />
+          </Key>
+          <Property Name="ID_PERFIL" Type="int" Nullable="false" />
+          <Property Name="PERFIL" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ESTADO" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID_UNIDAD" Type="int" />
+        </EntityType>
+        <EntityType Name="PERFILES_OPCIONES">
+          <Key>
+            <PropertyRef Name="ID_OPC_MEN" />
+          </Key>
+          <Property Name="ID_OPC_MEN" Type="int" Nullable="false" />
+          <Property Name="ID_MENU" Type="int" Nullable="false" />
+          <Property Name="ID_PERFIL" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SALIDADES_MUNICIONES">
+          <Key>
+            <PropertyRef Name="ID_SALIDA" />
+          </Key>
+          <Property Name="ID_SALIDA" Type="int" Nullable="false" />
+          <Property Name="ID_MUNICION_UNIDAD" Type="int" Nullable="false" />
+          <Property Name="SALIDA" Type="int" Nullable="false" />
+          <Property Name="OBSERVACION" Type="varchar" MaxLength="150" />
+          <Property Name="LOGIN" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FECHA" Type="date" Nullable="false" />
+          <Property Name="FECHA_REG" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TABLAS">
+          <Key>
+            <PropertyRef Name="ID_TABLA" />
+          </Key>
+          <Property Name="ID_TABLA" Type="int" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="UNIDADES">
+          <Key>
+            <PropertyRef Name="ID_UNIDAD" />
+          </Key>
+          <Property Name="ID_UNIDAD" Type="int" Nullable="false" />
+          <Property Name="UNIDAD" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DESCRIPCION" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="int" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LOGIN" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CONTRASEÑA" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FECHA_ALTA" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_CADUCIDAD" Type="datetime" />
+          <Property Name="ID_PERFIL" Type="int" Nullable="false" />
+          <Property Name="ESTADO" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_COMPONENTES_ITEMS_ITEMS_ARMAMENTO">
+          <End Role="ITEMS_ARMAMENTO" Type="EmiModel.Store.ITEMS_ARMAMENTO" Multiplicity="1" />
+          <End Role="COMPONENTES_ITEMS" Type="EmiModel.Store.COMPONENTES_ITEMS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEMS_ARMAMENTO">
+              <PropertyRef Name="ID_ITEM" />
+            </Principal>
+            <Dependent Role="COMPONENTES_ITEMS">
+              <PropertyRef Name="ID_ITEM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CONTRASENAS_USUARIOS">
+          <End Role="USUARIOS" Type="EmiModel.Store.USUARIOS" Multiplicity="1" />
+          <End Role="CONTRASENAS" Type="EmiModel.Store.CONTRASENAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIOS">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="CONTRASENAS">
+              <PropertyRef Name="ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DESPACHOS_DETALLES_PEDIDOS">
+          <End Role="DETALLES_PEDIDOS" Type="EmiModel.Store.DETALLES_PEDIDOS" Multiplicity="1" />
+          <End Role="DESPACHOS" Type="EmiModel.Store.DESPACHOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DETALLES_PEDIDOS">
+              <PropertyRef Name="ID_DETALLE" />
+            </Principal>
+            <Dependent Role="DESPACHOS">
+              <PropertyRef Name="ID_DETALLE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DESPACHOS_ITEMS_ARMAMENTO">
+          <End Role="ITEMS_ARMAMENTO" Type="EmiModel.Store.ITEMS_ARMAMENTO" Multiplicity="0..1" />
+          <End Role="DESPACHOS" Type="EmiModel.Store.DESPACHOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEMS_ARMAMENTO">
+              <PropertyRef Name="ID_ITEM" />
+            </Principal>
+            <Dependent Role="DESPACHOS">
+              <PropertyRef Name="ID_ITEM_ARMAMENTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DESPACHOS_ITEMS_MAT_LOGISTICOS1">
+          <End Role="ITEMS_MAT_LOGISTICOS" Type="EmiModel.Store.ITEMS_MAT_LOGISTICOS" Multiplicity="0..1" />
+          <End Role="DESPACHOS" Type="EmiModel.Store.DESPACHOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEMS_MAT_LOGISTICOS">
+              <PropertyRef Name="ID_ITEM" />
+            </Principal>
+            <Dependent Role="DESPACHOS">
+              <PropertyRef Name="ID_ITEM_LOGISTICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLES_PEDIDOS_MAT_BELICOS">
+          <End Role="MAT_BELICOS" Type="EmiModel.Store.MAT_BELICOS" Multiplicity="0..1" />
+          <End Role="DETALLES_PEDIDOS" Type="EmiModel.Store.DETALLES_PEDIDOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Principal>
+            <Dependent Role="DETALLES_PEDIDOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLES_PEDIDOS_MAT_LOGISTICOS">
+          <End Role="MAT_LOGISTICOS" Type="EmiModel.Store.MAT_LOGISTICOS" Multiplicity="0..1" />
+          <End Role="DETALLES_PEDIDOS" Type="EmiModel.Store.DETALLES_PEDIDOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_LOGISTICOS">
+              <PropertyRef Name="ID_MAT_LOGISTICO" />
+            </Principal>
+            <Dependent Role="DETALLES_PEDIDOS">
+              <PropertyRef Name="ID_MAT_LOGISTICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLES_PEDIDOS_PEDIDOS">
+          <End Role="PEDIDOS" Type="EmiModel.Store.PEDIDOS" Multiplicity="1" />
+          <End Role="DETALLES_PEDIDOS" Type="EmiModel.Store.DETALLES_PEDIDOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PEDIDOS">
+              <PropertyRef Name="ID_PEDIDO" />
+            </Principal>
+            <Dependent Role="DETALLES_PEDIDOS">
+              <PropertyRef Name="ID_PEDIDO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HISTORICO_CMP_ITEMS_ARMAMENTO">
+          <End Role="ITEMS_ARMAMENTO" Type="EmiModel.Store.ITEMS_ARMAMENTO" Multiplicity="1" />
+          <End Role="HISTORICO_CMP" Type="EmiModel.Store.HISTORICO_CMP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEMS_ARMAMENTO">
+              <PropertyRef Name="ID_ITEM" />
+            </Principal>
+            <Dependent Role="HISTORICO_CMP">
+              <PropertyRef Name="ID_ITEM_OPERABLE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HISTORICO_CMP_ITEMS_ARMAMENTO1">
+          <End Role="ITEMS_ARMAMENTO" Type="EmiModel.Store.ITEMS_ARMAMENTO" Multiplicity="1" />
+          <End Role="HISTORICO_CMP" Type="EmiModel.Store.HISTORICO_CMP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEMS_ARMAMENTO">
+              <PropertyRef Name="ID_ITEM" />
+            </Principal>
+            <Dependent Role="HISTORICO_CMP">
+              <PropertyRef Name="ID_ITEM_NO_OPERABLE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HISTORICOS_PEDIDOS_PEDIDOS">
+          <End Role="PEDIDOS" Type="EmiModel.Store.PEDIDOS" Multiplicity="1" />
+          <End Role="HISTORICOS_PEDIDOS" Type="EmiModel.Store.HISTORICOS_PEDIDOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PEDIDOS">
+              <PropertyRef Name="ID_PEDIDO" />
+            </Principal>
+            <Dependent Role="HISTORICOS_PEDIDOS">
+              <PropertyRef Name="ID_PEDIDO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITEMS_ARMAMENTO_MAT_BELICOS">
+          <End Role="MAT_BELICOS" Type="EmiModel.Store.MAT_BELICOS" Multiplicity="0..1" />
+          <End Role="ITEMS_ARMAMENTO" Type="EmiModel.Store.ITEMS_ARMAMENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Principal>
+            <Dependent Role="ITEMS_ARMAMENTO">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITEMS_ARMAMENTO_UNIDADES">
+          <End Role="UNIDADES" Type="EmiModel.Store.UNIDADES" Multiplicity="0..1" />
+          <End Role="ITEMS_ARMAMENTO" Type="EmiModel.Store.ITEMS_ARMAMENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNIDADES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Principal>
+            <Dependent Role="ITEMS_ARMAMENTO">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITEMS_MAT_LOGISTICOS_MAT_LOGISTICOS">
+          <End Role="MAT_LOGISTICOS" Type="EmiModel.Store.MAT_LOGISTICOS" Multiplicity="0..1" />
+          <End Role="ITEMS_MAT_LOGISTICOS" Type="EmiModel.Store.ITEMS_MAT_LOGISTICOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_LOGISTICOS">
+              <PropertyRef Name="ID_MAT_LOGISTICO" />
+            </Principal>
+            <Dependent Role="ITEMS_MAT_LOGISTICOS">
+              <PropertyRef Name="ID_MAT_LOGISTICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITEMS_MAT_LOGISTICOS_UNIDADES">
+          <End Role="UNIDADES" Type="EmiModel.Store.UNIDADES" Multiplicity="0..1" />
+          <End Role="ITEMS_MAT_LOGISTICOS" Type="EmiModel.Store.ITEMS_MAT_LOGISTICOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNIDADES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Principal>
+            <Dependent Role="ITEMS_MAT_LOGISTICOS">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITEMS_VERIFICACIONES_ITEMS_MAT_LOGISTICOS">
+          <End Role="ITEMS_MAT_LOGISTICOS" Type="EmiModel.Store.ITEMS_MAT_LOGISTICOS" Multiplicity="1" />
+          <End Role="ITEMS_VERIFICACIONES" Type="EmiModel.Store.ITEMS_VERIFICACIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEMS_MAT_LOGISTICOS">
+              <PropertyRef Name="ID_ITEM" />
+            </Principal>
+            <Dependent Role="ITEMS_VERIFICACIONES">
+              <PropertyRef Name="ID_ITEM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LISTAS_ITEMS_LISTAS">
+          <End Role="LISTAS1" Type="EmiModel.Store.LISTAS1" Multiplicity="1" />
+          <End Role="LISTAS_ITEMS" Type="EmiModel.Store.LISTAS_ITEMS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LISTAS1">
+              <PropertyRef Name="ID_LISTA" />
+            </Principal>
+            <Dependent Role="LISTAS_ITEMS">
+              <PropertyRef Name="ID_LISTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LISTAS_ITEMS_LISTAS_ITEMS">
+          <End Role="LISTAS_ITEMS" Type="EmiModel.Store.LISTAS_ITEMS" Multiplicity="0..1" />
+          <End Role="LISTAS_ITEMS1" Type="EmiModel.Store.LISTAS_ITEMS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LISTAS_ITEMS">
+              <PropertyRef Name="ID_TABLA" />
+            </Principal>
+            <Dependent Role="LISTAS_ITEMS1">
+              <PropertyRef Name="ID_PADRE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOV_MAT_BELICOS_MAT_BELICOS">
+          <End Role="MAT_BELICOS" Type="EmiModel.Store.MAT_BELICOS" Multiplicity="1" />
+          <End Role="MOV_MAT_BELICOS" Type="EmiModel.Store.MOV_MAT_BELICOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Principal>
+            <Dependent Role="MOV_MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOV_MUNICIONES_UNIDADES_MUNICIONES_UNIDADES">
+          <End Role="MUNICIONES_UNIDADES" Type="EmiModel.Store.MUNICIONES_UNIDADES" Multiplicity="1" />
+          <End Role="MOV_MUNICIONES_UNIDADES" Type="EmiModel.Store.MOV_MUNICIONES_UNIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MUNICIONES_UNIDADES">
+              <PropertyRef Name="ID_MUNICION_UNIDAD" />
+            </Principal>
+            <Dependent Role="MOV_MUNICIONES_UNIDADES">
+              <PropertyRef Name="ID_MUNICION_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MUNICIONES_UNIDADES_MAT_BELICOS">
+          <End Role="MAT_BELICOS" Type="EmiModel.Store.MAT_BELICOS" Multiplicity="1" />
+          <End Role="MUNICIONES_UNIDADES" Type="EmiModel.Store.MUNICIONES_UNIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Principal>
+            <Dependent Role="MUNICIONES_UNIDADES">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MUNICIONES_UNIDADES_UNIDADES">
+          <End Role="UNIDADES" Type="EmiModel.Store.UNIDADES" Multiplicity="1" />
+          <End Role="MUNICIONES_UNIDADES" Type="EmiModel.Store.MUNICIONES_UNIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNIDADES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Principal>
+            <Dependent Role="MUNICIONES_UNIDADES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PARTES_MAT_BELICOS_MAT_BELICOS">
+          <End Role="MAT_BELICOS" Type="EmiModel.Store.MAT_BELICOS" Multiplicity="1" />
+          <End Role="PARTES_MAT_BELICOS" Type="EmiModel.Store.PARTES_MAT_BELICOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Principal>
+            <Dependent Role="PARTES_MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PEDIDOS_UNIDADES">
+          <End Role="UNIDADES" Type="EmiModel.Store.UNIDADES" Multiplicity="1" />
+          <End Role="PEDIDOS" Type="EmiModel.Store.PEDIDOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNIDADES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Principal>
+            <Dependent Role="PEDIDOS">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERFILES_OPCIONES_MENU_OPCIONES1">
+          <End Role="MENU_OPCIONES" Type="EmiModel.Store.MENU_OPCIONES" Multiplicity="1" />
+          <End Role="PERFILES_OPCIONES" Type="EmiModel.Store.PERFILES_OPCIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENU_OPCIONES">
+              <PropertyRef Name="ID_MENU" />
+            </Principal>
+            <Dependent Role="PERFILES_OPCIONES">
+              <PropertyRef Name="ID_MENU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERFILES_OPCIONES_PERFILES">
+          <End Role="PERFILES" Type="EmiModel.Store.PERFILES" Multiplicity="1" />
+          <End Role="PERFILES_OPCIONES" Type="EmiModel.Store.PERFILES_OPCIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERFILES">
+              <PropertyRef Name="ID_PERFIL" />
+            </Principal>
+            <Dependent Role="PERFILES_OPCIONES">
+              <PropertyRef Name="ID_PERFIL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERFILES_UNIDADES">
+          <End Role="UNIDADES" Type="EmiModel.Store.UNIDADES" Multiplicity="0..1" />
+          <End Role="PERFILES" Type="EmiModel.Store.PERFILES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNIDADES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Principal>
+            <Dependent Role="PERFILES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SALIDADES_MUNICIONES_MUNICIONES_UNIDADES">
+          <End Role="MUNICIONES_UNIDADES" Type="EmiModel.Store.MUNICIONES_UNIDADES" Multiplicity="1" />
+          <End Role="SALIDADES_MUNICIONES" Type="EmiModel.Store.SALIDADES_MUNICIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MUNICIONES_UNIDADES">
+              <PropertyRef Name="ID_MUNICION_UNIDAD" />
+            </Principal>
+            <Dependent Role="SALIDADES_MUNICIONES">
+              <PropertyRef Name="ID_MUNICION_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USUARIOS_PERFILES">
+          <End Role="PERFILES" Type="EmiModel.Store.PERFILES" Multiplicity="1" />
+          <End Role="USUARIOS" Type="EmiModel.Store.USUARIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERFILES">
+              <PropertyRef Name="ID_PERFIL" />
+            </Principal>
+            <Dependent Role="USUARIOS">
+              <PropertyRef Name="ID_PERFIL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EmiModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EmiEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="PERFILES" EntityType="EmiModel.PERFILES" />
+          <EntitySet Name="USUARIOS" EntityType="EmiModel.USUARIOS" />
+          <AssociationSet Name="FK_USUARIOS_PERFILES" Association="EmiModel.FK_USUARIOS_PERFILES">
+            <End Role="PERFILES" EntitySet="PERFILES" />
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+          </AssociationSet>
+          <EntitySet Name="MENU_OPCIONES" EntityType="EmiModel.MENU_OPCIONES" />
+          <EntitySet Name="PERFILES_OPCIONES" EntityType="EmiModel.PERFILES_OPCIONES" />
+          <AssociationSet Name="FK_PERFILES_OPCIONES_MENU_OPCIONES1" Association="EmiModel.FK_PERFILES_OPCIONES_MENU_OPCIONES1">
+            <End Role="MENU_OPCIONES" EntitySet="MENU_OPCIONES" />
+            <End Role="PERFILES_OPCIONES" EntitySet="PERFILES_OPCIONES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERFILES_OPCIONES_PERFILES" Association="EmiModel.FK_PERFILES_OPCIONES_PERFILES">
+            <End Role="PERFILES" EntitySet="PERFILES" />
+            <End Role="PERFILES_OPCIONES" EntitySet="PERFILES_OPCIONES" />
+          </AssociationSet>
+          <EntitySet Name="MATERIALES_BELICOS" EntityType="EmiModel.MATERIALES_BELICOS" />
+          <EntitySet Name="COMPONENTES_ITEMS" EntityType="EmiModel.COMPONENTES_ITEMS" />
+          <EntitySet Name="DETALLES_PEDIDOS" EntityType="EmiModel.DETALLES_PEDIDOS" />
+          <EntitySet Name="HISTORICO_CMP" EntityType="EmiModel.HISTORICO_CMP" />
+          <EntitySet Name="HISTORICOS_PEDIDOS" EntityType="EmiModel.HISTORICOS_PEDIDOS" />
+          <EntitySet Name="ITEMS_VERIFICACIONES" EntityType="EmiModel.ITEMS_VERIFICACIONES" />
+          <EntitySet Name="MAT_LOGISTICOS" EntityType="EmiModel.MAT_LOGISTICOS" />
+          <EntitySet Name="MOV_MAT_BELICOS" EntityType="EmiModel.MOV_MAT_BELICOS" />
+          <EntitySet Name="MOV_MUNICIONES_UNIDADES" EntityType="EmiModel.MOV_MUNICIONES_UNIDADES" />
+          <EntitySet Name="MUNICIONES_UNIDADES" EntityType="EmiModel.MUNICIONES_UNIDADES" />
+          <EntitySet Name="PARTES_MAT_BELICOS" EntityType="EmiModel.PARTES_MAT_BELICOS" />
+          <EntitySet Name="PEDIDOS" EntityType="EmiModel.PEDIDOS" />
+          <EntitySet Name="SALIDADES_MUNICIONES" EntityType="EmiModel.SALIDADES_MUNICIONES" />
+          <EntitySet Name="UNIDADES" EntityType="EmiModel.UNIDADES" />
+          <AssociationSet Name="FK_DETALLES_PEDIDOS_MAT_LOGISTICOS" Association="EmiModel.FK_DETALLES_PEDIDOS_MAT_LOGISTICOS">
+            <End Role="MAT_LOGISTICOS" EntitySet="MAT_LOGISTICOS" />
+            <End Role="DETALLES_PEDIDOS" EntitySet="DETALLES_PEDIDOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLES_PEDIDOS_PEDIDOS" Association="EmiModel.FK_DETALLES_PEDIDOS_PEDIDOS">
+            <End Role="PEDIDOS" EntitySet="PEDIDOS" />
+            <End Role="DETALLES_PEDIDOS" EntitySet="DETALLES_PEDIDOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HISTORICOS_PEDIDOS_PEDIDOS" Association="EmiModel.FK_HISTORICOS_PEDIDOS_PEDIDOS">
+            <End Role="PEDIDOS" EntitySet="PEDIDOS" />
+            <End Role="HISTORICOS_PEDIDOS" EntitySet="HISTORICOS_PEDIDOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOV_MUNICIONES_UNIDADES_MUNICIONES_UNIDADES" Association="EmiModel.FK_MOV_MUNICIONES_UNIDADES_MUNICIONES_UNIDADES">
+            <End Role="MUNICIONES_UNIDADES" EntitySet="MUNICIONES_UNIDADES" />
+            <End Role="MOV_MUNICIONES_UNIDADES" EntitySet="MOV_MUNICIONES_UNIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MUNICIONES_UNIDADES_UNIDADES" Association="EmiModel.FK_MUNICIONES_UNIDADES_UNIDADES">
+            <End Role="UNIDADES" EntitySet="UNIDADES" />
+            <End Role="MUNICIONES_UNIDADES" EntitySet="MUNICIONES_UNIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SALIDADES_MUNICIONES_MUNICIONES_UNIDADES" Association="EmiModel.FK_SALIDADES_MUNICIONES_MUNICIONES_UNIDADES">
+            <End Role="MUNICIONES_UNIDADES" EntitySet="MUNICIONES_UNIDADES" />
+            <End Role="SALIDADES_MUNICIONES" EntitySet="SALIDADES_MUNICIONES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PEDIDOS_UNIDADES" Association="EmiModel.FK_PEDIDOS_UNIDADES">
+            <End Role="UNIDADES" EntitySet="UNIDADES" />
+            <End Role="PEDIDOS" EntitySet="PEDIDOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERFILES_UNIDADES" Association="EmiModel.FK_PERFILES_UNIDADES">
+            <End Role="UNIDADES" EntitySet="UNIDADES" />
+            <End Role="PERFILES" EntitySet="PERFILES" />
+          </AssociationSet>
+          <EntitySet Name="LISTAS1" EntityType="EmiModel.LISTAS1" />
+          <EntitySet Name="ITEMS_ARMAMENTO" EntityType="EmiModel.ITEMS_ARMAMENTO" />
+          <AssociationSet Name="FK_COMPONENTES_ITEMS_ITEMS_ARMAMENTO" Association="EmiModel.FK_COMPONENTES_ITEMS_ITEMS_ARMAMENTO">
+            <End Role="ITEMS_ARMAMENTO" EntitySet="ITEMS_ARMAMENTO" />
+            <End Role="COMPONENTES_ITEMS" EntitySet="COMPONENTES_ITEMS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HISTORICO_CMP_ITEMS_ARMAMENTO" Association="EmiModel.FK_HISTORICO_CMP_ITEMS_ARMAMENTO">
+            <End Role="ITEMS_ARMAMENTO" EntitySet="ITEMS_ARMAMENTO" />
+            <End Role="HISTORICO_CMP" EntitySet="HISTORICO_CMP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HISTORICO_CMP_ITEMS_ARMAMENTO1" Association="EmiModel.FK_HISTORICO_CMP_ITEMS_ARMAMENTO1">
+            <End Role="ITEMS_ARMAMENTO" EntitySet="ITEMS_ARMAMENTO" />
+            <End Role="HISTORICO_CMP" EntitySet="HISTORICO_CMP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITEMS_ARMAMENTO_UNIDADES" Association="EmiModel.FK_ITEMS_ARMAMENTO_UNIDADES">
+            <End Role="UNIDADES" EntitySet="UNIDADES" />
+            <End Role="ITEMS_ARMAMENTO" EntitySet="ITEMS_ARMAMENTO" />
+          </AssociationSet>
+          <EntitySet Name="LISTAS_ITEMS" EntityType="EmiModel.LISTAS_ITEMS" />
+          <AssociationSet Name="FK_LISTAS_ITEMS_LISTAS" Association="EmiModel.FK_LISTAS_ITEMS_LISTAS">
+            <End Role="LISTAS1" EntitySet="LISTAS1" />
+            <End Role="LISTAS_ITEMS" EntitySet="LISTAS_ITEMS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LISTAS_ITEMS_LISTAS_ITEMS" Association="EmiModel.FK_LISTAS_ITEMS_LISTAS_ITEMS">
+            <End Role="LISTAS_ITEMS" EntitySet="LISTAS_ITEMS" />
+            <End Role="LISTAS_ITEMS1" EntitySet="LISTAS_ITEMS" />
+          </AssociationSet>
+          <EntitySet Name="MAT_BELICOS" EntityType="EmiModel.MAT_BELICOS" />
+          <AssociationSet Name="FK_DETALLES_PEDIDOS_MAT_BELICOS" Association="EmiModel.FK_DETALLES_PEDIDOS_MAT_BELICOS">
+            <End Role="MAT_BELICOS" EntitySet="MAT_BELICOS" />
+            <End Role="DETALLES_PEDIDOS" EntitySet="DETALLES_PEDIDOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITEMS_ARMAMENTO_MAT_BELICOS" Association="EmiModel.FK_ITEMS_ARMAMENTO_MAT_BELICOS">
+            <End Role="MAT_BELICOS" EntitySet="MAT_BELICOS" />
+            <End Role="ITEMS_ARMAMENTO" EntitySet="ITEMS_ARMAMENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOV_MAT_BELICOS_MAT_BELICOS" Association="EmiModel.FK_MOV_MAT_BELICOS_MAT_BELICOS">
+            <End Role="MAT_BELICOS" EntitySet="MAT_BELICOS" />
+            <End Role="MOV_MAT_BELICOS" EntitySet="MOV_MAT_BELICOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MUNICIONES_UNIDADES_MAT_BELICOS" Association="EmiModel.FK_MUNICIONES_UNIDADES_MAT_BELICOS">
+            <End Role="MAT_BELICOS" EntitySet="MAT_BELICOS" />
+            <End Role="MUNICIONES_UNIDADES" EntitySet="MUNICIONES_UNIDADES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PARTES_MAT_BELICOS_MAT_BELICOS" Association="EmiModel.FK_PARTES_MAT_BELICOS_MAT_BELICOS">
+            <End Role="MAT_BELICOS" EntitySet="MAT_BELICOS" />
+            <End Role="PARTES_MAT_BELICOS" EntitySet="PARTES_MAT_BELICOS" />
+          </AssociationSet>
+          <EntitySet Name="ITEMS_MAT_LOGISTICOS" EntityType="EmiModel.ITEMS_MAT_LOGISTICOS" />
+          <AssociationSet Name="FK_ITEMS_MAT_LOGISTICOS_MAT_LOGISTICOS" Association="EmiModel.FK_ITEMS_MAT_LOGISTICOS_MAT_LOGISTICOS">
+            <End Role="MAT_LOGISTICOS" EntitySet="MAT_LOGISTICOS" />
+            <End Role="ITEMS_MAT_LOGISTICOS" EntitySet="ITEMS_MAT_LOGISTICOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITEMS_MAT_LOGISTICOS_UNIDADES" Association="EmiModel.FK_ITEMS_MAT_LOGISTICOS_UNIDADES">
+            <End Role="UNIDADES" EntitySet="UNIDADES" />
+            <End Role="ITEMS_MAT_LOGISTICOS" EntitySet="ITEMS_MAT_LOGISTICOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ITEMS_VERIFICACIONES_ITEMS_MAT_LOGISTICOS" Association="EmiModel.FK_ITEMS_VERIFICACIONES_ITEMS_MAT_LOGISTICOS">
+            <End Role="ITEMS_MAT_LOGISTICOS" EntitySet="ITEMS_MAT_LOGISTICOS" />
+            <End Role="ITEMS_VERIFICACIONES" EntitySet="ITEMS_VERIFICACIONES" />
+          </AssociationSet>
+          <EntitySet Name="DESPACHOS" EntityType="EmiModel.DESPACHOS" />
+          <AssociationSet Name="FK_DESPACHOS_DETALLES_PEDIDOS" Association="EmiModel.FK_DESPACHOS_DETALLES_PEDIDOS">
+            <End Role="DETALLES_PEDIDOS" EntitySet="DETALLES_PEDIDOS" />
+            <End Role="DESPACHOS" EntitySet="DESPACHOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DESPACHOS_ITEMS_ARMAMENTO" Association="EmiModel.FK_DESPACHOS_ITEMS_ARMAMENTO">
+            <End Role="ITEMS_ARMAMENTO" EntitySet="ITEMS_ARMAMENTO" />
+            <End Role="DESPACHOS" EntitySet="DESPACHOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DESPACHOS_ITEMS_MAT_LOGISTICOS1" Association="EmiModel.FK_DESPACHOS_ITEMS_MAT_LOGISTICOS1">
+            <End Role="ITEMS_MAT_LOGISTICOS" EntitySet="ITEMS_MAT_LOGISTICOS" />
+            <End Role="DESPACHOS" EntitySet="DESPACHOS" />
+          </AssociationSet>
+          <EntitySet Name="CONTRASENAS" EntityType="EmiModel.CONTRASENAS" />
+          <AssociationSet Name="FK_CONTRASENAS_USUARIOS" Association="EmiModel.FK_CONTRASENAS_USUARIOS">
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+            <End Role="CONTRASENAS" EntitySet="CONTRASENAS" />
+          </AssociationSet>
+          <EntitySet Name="BITACORAS" EntityType="EmiModel.BITACORAS" />
+          </EntityContainer>
+        <EntityType Name="PERFILES">
+          <Key>
+            <PropertyRef Name="ID_PERFIL" />
+          </Key>
+          <Property Type="Int32" Name="ID_PERFIL" Nullable="false" />
+          <Property Type="String" Name="PERFIL" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DESCRIPCION" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="USUARIOS" Relationship="EmiModel.FK_USUARIOS_PERFILES" FromRole="PERFILES" ToRole="USUARIOS" />
+          <NavigationProperty Name="PERFILES_OPCIONES" Relationship="EmiModel.FK_PERFILES_OPCIONES_PERFILES" FromRole="PERFILES" ToRole="PERFILES_OPCIONES" />
+          <Property Type="Int32" Name="ID_UNIDAD" />
+          <NavigationProperty Name="UNIDADES" Relationship="EmiModel.FK_PERFILES_UNIDADES" FromRole="PERFILES" ToRole="UNIDADES" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Type="Int32" Name="ID_USUARIO" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOGIN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTRASEÑA" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA_ALTA" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="FECHA_CADUCIDAD" Precision="3" />
+          <Property Type="Int32" Name="ID_PERFIL" Nullable="false" />
+          <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PERFILES" Relationship="EmiModel.FK_USUARIOS_PERFILES" FromRole="USUARIOS" ToRole="PERFILES" />
+          <NavigationProperty Name="CONTRASENAS" Relationship="EmiModel.FK_CONTRASENAS_USUARIOS" FromRole="USUARIOS" ToRole="CONTRASENAS" />
+        </EntityType>
+        <Association Name="FK_USUARIOS_PERFILES">
+          <End Type="EmiModel.PERFILES" Role="PERFILES" Multiplicity="1" />
+          <End Type="EmiModel.USUARIOS" Role="USUARIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERFILES">
+              <PropertyRef Name="ID_PERFIL" />
+            </Principal>
+            <Dependent Role="USUARIOS">
+              <PropertyRef Name="ID_PERFIL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="MENU_OPCIONES">
+          <Key>
+            <PropertyRef Name="ID_MENU" />
+          </Key>
+          <Property Type="Int32" Name="ID_MENU" Nullable="false" />
+          <Property Type="String" Name="MENU" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CLASE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TOOLTIP" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ICONCCS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID_PADRE" />
+          <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PERFILES_OPCIONES" Relationship="EmiModel.FK_PERFILES_OPCIONES_MENU_OPCIONES1" FromRole="MENU_OPCIONES" ToRole="PERFILES_OPCIONES" />
+        </EntityType>
+        <EntityType Name="PERFILES_OPCIONES">
+          <Key>
+            <PropertyRef Name="ID_OPC_MEN" />
+          </Key>
+          <Property Type="Int32" Name="ID_OPC_MEN" Nullable="false" />
+          <Property Type="Int32" Name="ID_MENU" Nullable="false" />
+          <Property Type="Int32" Name="ID_PERFIL" Nullable="false" />
+          <NavigationProperty Name="MENU_OPCIONES" Relationship="EmiModel.FK_PERFILES_OPCIONES_MENU_OPCIONES1" FromRole="PERFILES_OPCIONES" ToRole="MENU_OPCIONES" />
+          <NavigationProperty Name="PERFILES" Relationship="EmiModel.FK_PERFILES_OPCIONES_PERFILES" FromRole="PERFILES_OPCIONES" ToRole="PERFILES" />
+        </EntityType>
+        <Association Name="FK_PERFILES_OPCIONES_MENU_OPCIONES1">
+          <End Type="EmiModel.MENU_OPCIONES" Role="MENU_OPCIONES" Multiplicity="1" />
+          <End Type="EmiModel.PERFILES_OPCIONES" Role="PERFILES_OPCIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENU_OPCIONES">
+              <PropertyRef Name="ID_MENU" />
+            </Principal>
+            <Dependent Role="PERFILES_OPCIONES">
+              <PropertyRef Name="ID_MENU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERFILES_OPCIONES_PERFILES">
+          <End Type="EmiModel.PERFILES" Role="PERFILES" Multiplicity="1" />
+          <End Type="EmiModel.PERFILES_OPCIONES" Role="PERFILES_OPCIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERFILES">
+              <PropertyRef Name="ID_PERFIL" />
+            </Principal>
+            <Dependent Role="PERFILES_OPCIONES">
+              <PropertyRef Name="ID_PERFIL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="MATERIALES_BELICOS">
+          <Key>
+            <PropertyRef Name="ID_MATERIAL" />
+          </Key>
+          <Property Type="Int32" Name="ID_MATERIAL" Nullable="false" />
+          <Property Type="String" Name="CODIGO_MATERIAL" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ARMAMENTO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CALIBRE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="FABRICACION" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Type="DateTime" Name="FECHA_DOTACION" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="3" />
+          <Property Type="String" Name="UNIDAD" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="COMPONENTES_ITEMS">
+          <Key>
+            <PropertyRef Name="ID_CMP" />
+          </Key>
+          <Property Type="Int32" Name="ID_CMP" Nullable="false" />
+          <Property Type="Int32" Name="ID_ITEM" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CODIGO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ITEMS_ARMAMENTO" Relationship="EmiModel.FK_COMPONENTES_ITEMS_ITEMS_ARMAMENTO" FromRole="COMPONENTES_ITEMS" ToRole="ITEMS_ARMAMENTO" />
+        </EntityType>
+        <EntityType Name="DETALLES_PEDIDOS">
+          <Key>
+            <PropertyRef Name="ID_DETALLE" />
+          </Key>
+          <Property Type="Int32" Name="ID_DETALLE" Nullable="false" />
+          <Property Type="Int32" Name="ID_PEDIDO" Nullable="false" />
+          <Property Type="Int32" Name="ID_MAT_BELICO" />
+          <Property Type="Int32" Name="ID_MAT_LOGISTICO" />
+          <Property Type="Int32" Name="CANTIDAD_SOLICITADA" Nullable="false" />
+          <Property Type="Int32" Name="CANTIDAD_ENTREGADA" />
+          <Property Type="String" Name="ESTADO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MAT_LOGISTICOS" Relationship="EmiModel.FK_DETALLES_PEDIDOS_MAT_LOGISTICOS" FromRole="DETALLES_PEDIDOS" ToRole="MAT_LOGISTICOS" />
+          <NavigationProperty Name="PEDIDOS" Relationship="EmiModel.FK_DETALLES_PEDIDOS_PEDIDOS" FromRole="DETALLES_PEDIDOS" ToRole="PEDIDOS" />
+          <NavigationProperty Name="MAT_BELICOS" Relationship="EmiModel.FK_DETALLES_PEDIDOS_MAT_BELICOS" FromRole="DETALLES_PEDIDOS" ToRole="MAT_BELICOS" />
+          <NavigationProperty Name="DESPACHOS" Relationship="EmiModel.FK_DESPACHOS_DETALLES_PEDIDOS" FromRole="DETALLES_PEDIDOS" ToRole="DESPACHOS" />
+        </EntityType>
+        <EntityType Name="HISTORICO_CMP">
+          <Key>
+            <PropertyRef Name="ID_HIST" />
+          </Key>
+          <Property Type="Int32" Name="ID_HIST" Nullable="false" />
+          <Property Type="DateTime" Name="FECHA" Nullable="false" Precision="0" />
+          <Property Type="Int32" Name="ID_ITEM_OPERABLE" Nullable="false" />
+          <Property Type="String" Name="CMP_OPERABLE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID_ITEM_NO_OPERABLE" Nullable="false" />
+          <Property Type="String" Name="CMP_NO_OPERABLE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OBSERVACION" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="LOGIN" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ITEMS_ARMAMENTO" Relationship="EmiModel.FK_HISTORICO_CMP_ITEMS_ARMAMENTO" FromRole="HISTORICO_CMP" ToRole="ITEMS_ARMAMENTO" />
+          <NavigationProperty Name="ITEMS_ARMAMENTO1" Relationship="EmiModel.FK_HISTORICO_CMP_ITEMS_ARMAMENTO1" FromRole="HISTORICO_CMP" ToRole="ITEMS_ARMAMENTO" />
+          </EntityType>
+        <EntityType Name="HISTORICOS_PEDIDOS">
+          <Key>
+            <PropertyRef Name="ID_HIST" />
+          </Key>
+          <Property Type="Int32" Name="ID_HIST" Nullable="false" />
+          <Property Type="Int32" Name="ID_PEDIDO" Nullable="false" />
+          <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OBSERVACION" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA" Nullable="false" Precision="0" />
+          <Property Type="String" Name="LOGIN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PEDIDOS" Relationship="EmiModel.FK_HISTORICOS_PEDIDOS_PEDIDOS" FromRole="HISTORICOS_PEDIDOS" ToRole="PEDIDOS" />
+        </EntityType>
+        <EntityType Name="ITEMS_VERIFICACIONES">
+          <Key>
+            <PropertyRef Name="ID_VERIFICACION" />
+          </Key>
+          <Property Type="Int32" Name="ID_VERIFICACION" Nullable="false" />
+          <Property Type="Int32" Name="ID_ITEM" Nullable="false" />
+          <Property Type="String" Name="VALOR_NUEVO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VALOR_ANTERIOR" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOGIN" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA" Precision="0" />
+          <Property Type="DateTime" Name="FECHA_REG" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ITEMS_MAT_LOGISTICOS" Relationship="EmiModel.FK_ITEMS_VERIFICACIONES_ITEMS_MAT_LOGISTICOS" FromRole="ITEMS_VERIFICACIONES" ToRole="ITEMS_MAT_LOGISTICOS" />
+          <Property Type="String" Name="OBSERVACION" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MAT_LOGISTICOS">
+          <Key>
+            <PropertyRef Name="ID_MAT_LOGISTICO" />
+          </Key>
+          <Property Type="Int32" Name="ID_MAT_LOGISTICO" Nullable="false" />
+          <Property Type="String" Name="CODIGO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FABRICANTE" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TIPO_COMPONENTE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AERONAVE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GRUPO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NRO_PARTE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ESTADO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CICLO_VIDA" />
+          <Property Type="Int32" Name="HORA_VIDA" />
+          <Property Type="String" Name="DESCRIPCION" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA_DOTACION" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="FECHA_REG" Precision="3" />
+          <Property Type="String" Name="LOGIN" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DETALLES_PEDIDOS" Relationship="EmiModel.FK_DETALLES_PEDIDOS_MAT_LOGISTICOS" FromRole="MAT_LOGISTICOS" ToRole="DETALLES_PEDIDOS" />
+          <NavigationProperty Name="ITEMS_MAT_LOGISTICOS" Relationship="EmiModel.FK_ITEMS_MAT_LOGISTICOS_MAT_LOGISTICOS" FromRole="MAT_LOGISTICOS" ToRole="ITEMS_MAT_LOGISTICOS" />
+        </EntityType>
+        <EntityType Name="MOV_MAT_BELICOS">
+          <Key>
+            <PropertyRef Name="ID_MOV" />
+          </Key>
+          <Property Type="Int32" Name="ID_MOV" Nullable="false" />
+          <Property Type="DateTime" Name="FECHA" Nullable="false" Precision="0" />
+          <Property Type="Int32" Name="ID_MAT_BELICO" Nullable="false" />
+          <Property Type="Int32" Name="ENTRADA" Nullable="false" />
+          <Property Type="Int32" Name="SALIDA" Nullable="false" />
+          <Property Type="Int32" Name="SALDO" Nullable="false" />
+          <Property Type="String" Name="OPERACION" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID_OPERACION" Nullable="false" />
+          <Property Type="String" Name="LOGIN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MAT_BELICOS" Relationship="EmiModel.FK_MOV_MAT_BELICOS_MAT_BELICOS" FromRole="MOV_MAT_BELICOS" ToRole="MAT_BELICOS" />
+        </EntityType>
+        <EntityType Name="MOV_MUNICIONES_UNIDADES">
+          <Key>
+            <PropertyRef Name="ID_MOV" />
+          </Key>
+          <Property Type="Int32" Name="ID_MOV" Nullable="false" />
+          <Property Type="DateTime" Name="FECHA" Nullable="false" Precision="0" />
+          <Property Type="Int32" Name="ID_MUNICION_UNIDAD" Nullable="false" />
+          <Property Type="Int32" Name="ENTRADA" Nullable="false" />
+          <Property Type="Int32" Name="SALIDA" Nullable="false" />
+          <Property Type="Int32" Name="SALDO" Nullable="false" />
+          <Property Type="String" Name="OPERACION" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID_OPERACION" Nullable="false" />
+          <Property Type="String" Name="LOGIN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MUNICIONES_UNIDADES" Relationship="EmiModel.FK_MOV_MUNICIONES_UNIDADES_MUNICIONES_UNIDADES" FromRole="MOV_MUNICIONES_UNIDADES" ToRole="MUNICIONES_UNIDADES" />
+        </EntityType>
+        <EntityType Name="MUNICIONES_UNIDADES">
+          <Key>
+            <PropertyRef Name="ID_MUNICION_UNIDAD" />
+          </Key>
+          <Property Type="Int32" Name="ID_MUNICION_UNIDAD" Nullable="false" />
+          <Property Type="Int32" Name="ID_MAT_BELICO" Nullable="false" />
+          <Property Type="Int32" Name="ID_UNIDAD" Nullable="false" />
+          <Property Type="Int32" Name="CANTIDAD_DISPONIBLE" Nullable="false" />
+          <NavigationProperty Name="MOV_MUNICIONES_UNIDADES" Relationship="EmiModel.FK_MOV_MUNICIONES_UNIDADES_MUNICIONES_UNIDADES" FromRole="MUNICIONES_UNIDADES" ToRole="MOV_MUNICIONES_UNIDADES" />
+          <NavigationProperty Name="UNIDADES" Relationship="EmiModel.FK_MUNICIONES_UNIDADES_UNIDADES" FromRole="MUNICIONES_UNIDADES" ToRole="UNIDADES" />
+          <NavigationProperty Name="SALIDADES_MUNICIONES" Relationship="EmiModel.FK_SALIDADES_MUNICIONES_MUNICIONES_UNIDADES" FromRole="MUNICIONES_UNIDADES" ToRole="SALIDADES_MUNICIONES" />
+          <NavigationProperty Name="MAT_BELICOS" Relationship="EmiModel.FK_MUNICIONES_UNIDADES_MAT_BELICOS" FromRole="MUNICIONES_UNIDADES" ToRole="MAT_BELICOS" />
+        </EntityType>
+        <EntityType Name="PARTES_MAT_BELICOS">
+          <Key>
+            <PropertyRef Name="ID_PARTE" />
+          </Key>
+          <Property Type="Int32" Name="ID_PARTE" Nullable="false" />
+          <Property Type="Int32" Name="ID_MAT_BELICO" Nullable="false" />
+          <Property Type="String" Name="NOMBRE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DESCRIPCION" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MAT_BELICOS" Relationship="EmiModel.FK_PARTES_MAT_BELICOS_MAT_BELICOS" FromRole="PARTES_MAT_BELICOS" ToRole="MAT_BELICOS" />
+        </EntityType>
+        <EntityType Name="PEDIDOS">
+          <Key>
+            <PropertyRef Name="ID_PEDIDO" />
+          </Key>
+          <Property Type="Int32" Name="ID_PEDIDO" Nullable="false" />
+          <Property Type="Int32" Name="NRO_PEDIDO" Nullable="false" />
+          <Property Type="String" Name="TIPO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID_UNIDAD" Nullable="false" />
+          <Property Type="DateTime" Name="FECHA_PEDIDO" Nullable="false" Precision="0" />
+          <Property Type="String" Name="OBSERVACIONES" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOGIN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA_REG" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="FECHA_MODIF" Precision="0" />
+          <Property Type="String" Name="ESTADO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DETALLES_PEDIDOS" Relationship="EmiModel.FK_DETALLES_PEDIDOS_PEDIDOS" FromRole="PEDIDOS" ToRole="DETALLES_PEDIDOS" />
+          <NavigationProperty Name="HISTORICOS_PEDIDOS" Relationship="EmiModel.FK_HISTORICOS_PEDIDOS_PEDIDOS" FromRole="PEDIDOS" ToRole="HISTORICOS_PEDIDOS" />
+          <NavigationProperty Name="UNIDADES" Relationship="EmiModel.FK_PEDIDOS_UNIDADES" FromRole="PEDIDOS" ToRole="UNIDADES" />
+        </EntityType>
+        <EntityType Name="SALIDADES_MUNICIONES">
+          <Key>
+            <PropertyRef Name="ID_SALIDA" />
+          </Key>
+          <Property Type="Int32" Name="ID_SALIDA" Nullable="false" />
+          <Property Type="Int32" Name="ID_MUNICION_UNIDAD" Nullable="false" />
+          <Property Type="Int32" Name="SALIDA" Nullable="false" />
+          <Property Type="String" Name="OBSERVACION" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOGIN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="FECHA_REG" Nullable="false" Precision="3" />
+          <NavigationProperty Name="MUNICIONES_UNIDADES" Relationship="EmiModel.FK_SALIDADES_MUNICIONES_MUNICIONES_UNIDADES" FromRole="SALIDADES_MUNICIONES" ToRole="MUNICIONES_UNIDADES" />
+        </EntityType>
+        <EntityType Name="UNIDADES">
+          <Key>
+            <PropertyRef Name="ID_UNIDAD" />
+          </Key>
+          <Property Type="Int32" Name="ID_UNIDAD" Nullable="false" />
+          <Property Type="String" Name="UNIDAD" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DESCRIPCION" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MUNICIONES_UNIDADES" Relationship="EmiModel.FK_MUNICIONES_UNIDADES_UNIDADES" FromRole="UNIDADES" ToRole="MUNICIONES_UNIDADES" />
+          <NavigationProperty Name="PEDIDOS" Relationship="EmiModel.FK_PEDIDOS_UNIDADES" FromRole="UNIDADES" ToRole="PEDIDOS" />
+          <NavigationProperty Name="PERFILES" Relationship="EmiModel.FK_PERFILES_UNIDADES" FromRole="UNIDADES" ToRole="PERFILES" />
+          <NavigationProperty Name="ITEMS_ARMAMENTO" Relationship="EmiModel.FK_ITEMS_ARMAMENTO_UNIDADES" FromRole="UNIDADES" ToRole="ITEMS_ARMAMENTO" />
+          <NavigationProperty Name="ITEMS_MAT_LOGISTICOS" Relationship="EmiModel.FK_ITEMS_MAT_LOGISTICOS_UNIDADES" FromRole="UNIDADES" ToRole="ITEMS_MAT_LOGISTICOS" />
+        </EntityType>
+        <Association Name="FK_DETALLES_PEDIDOS_MAT_LOGISTICOS">
+          <End Type="EmiModel.MAT_LOGISTICOS" Role="MAT_LOGISTICOS" Multiplicity="0..1" />
+          <End Type="EmiModel.DETALLES_PEDIDOS" Role="DETALLES_PEDIDOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_LOGISTICOS">
+              <PropertyRef Name="ID_MAT_LOGISTICO" />
+            </Principal>
+            <Dependent Role="DETALLES_PEDIDOS">
+              <PropertyRef Name="ID_MAT_LOGISTICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLES_PEDIDOS_PEDIDOS">
+          <End Type="EmiModel.PEDIDOS" Role="PEDIDOS" Multiplicity="1" />
+          <End Type="EmiModel.DETALLES_PEDIDOS" Role="DETALLES_PEDIDOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PEDIDOS">
+              <PropertyRef Name="ID_PEDIDO" />
+            </Principal>
+            <Dependent Role="DETALLES_PEDIDOS">
+              <PropertyRef Name="ID_PEDIDO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HISTORICOS_PEDIDOS_PEDIDOS">
+          <End Type="EmiModel.PEDIDOS" Role="PEDIDOS" Multiplicity="1" />
+          <End Type="EmiModel.HISTORICOS_PEDIDOS" Role="HISTORICOS_PEDIDOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PEDIDOS">
+              <PropertyRef Name="ID_PEDIDO" />
+            </Principal>
+            <Dependent Role="HISTORICOS_PEDIDOS">
+              <PropertyRef Name="ID_PEDIDO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOV_MUNICIONES_UNIDADES_MUNICIONES_UNIDADES">
+          <End Type="EmiModel.MUNICIONES_UNIDADES" Role="MUNICIONES_UNIDADES" Multiplicity="1" />
+          <End Type="EmiModel.MOV_MUNICIONES_UNIDADES" Role="MOV_MUNICIONES_UNIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MUNICIONES_UNIDADES">
+              <PropertyRef Name="ID_MUNICION_UNIDAD" />
+            </Principal>
+            <Dependent Role="MOV_MUNICIONES_UNIDADES">
+              <PropertyRef Name="ID_MUNICION_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MUNICIONES_UNIDADES_UNIDADES">
+          <End Type="EmiModel.UNIDADES" Role="UNIDADES" Multiplicity="1" />
+          <End Type="EmiModel.MUNICIONES_UNIDADES" Role="MUNICIONES_UNIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNIDADES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Principal>
+            <Dependent Role="MUNICIONES_UNIDADES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SALIDADES_MUNICIONES_MUNICIONES_UNIDADES">
+          <End Type="EmiModel.MUNICIONES_UNIDADES" Role="MUNICIONES_UNIDADES" Multiplicity="1" />
+          <End Type="EmiModel.SALIDADES_MUNICIONES" Role="SALIDADES_MUNICIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MUNICIONES_UNIDADES">
+              <PropertyRef Name="ID_MUNICION_UNIDAD" />
+            </Principal>
+            <Dependent Role="SALIDADES_MUNICIONES">
+              <PropertyRef Name="ID_MUNICION_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PEDIDOS_UNIDADES">
+          <End Type="EmiModel.UNIDADES" Role="UNIDADES" Multiplicity="1" />
+          <End Type="EmiModel.PEDIDOS" Role="PEDIDOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNIDADES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Principal>
+            <Dependent Role="PEDIDOS">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERFILES_UNIDADES">
+          <End Type="EmiModel.UNIDADES" Role="UNIDADES" Multiplicity="0..1" />
+          <End Type="EmiModel.PERFILES" Role="PERFILES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNIDADES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Principal>
+            <Dependent Role="PERFILES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="LISTAS1">
+          <Key>
+            <PropertyRef Name="ID_LISTA" />
+          </Key>
+          <Property Type="Int32" Name="ID_LISTA" Nullable="false" />
+          <Property Type="String" Name="LISTA" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DESCRIPCION" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TAM_LIMITE" Nullable="false" />
+          <Property Type="String" Name="TIPO_VALOR" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MAYUS_MINUS" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ESTADO" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="LISTAS_ITEMS" Relationship="EmiModel.FK_LISTAS_ITEMS_LISTAS" FromRole="LISTAS1" ToRole="LISTAS_ITEMS" />
+        </EntityType>
+        <EntityType Name="ITEMS_ARMAMENTO">
+          <Key>
+            <PropertyRef Name="ID_ITEM" />
+          </Key>
+          <Property Type="Int32" Name="ID_ITEM" Nullable="false" />
+          <Property Type="Int32" Name="ID_MAT_BELICO" />
+          <Property Type="String" Name="NRO_FUSIL" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA_BAJA" Precision="0" />
+          <Property Type="String" Name="OBSERVACION_BAJA" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA_REG" Precision="3" />
+          <Property Type="Int32" Name="ID_UNIDAD" />
+          <Property Type="String" Name="LOGIN" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOGIN_BAJA" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="COMPONENTES_ITEMS" Relationship="EmiModel.FK_COMPONENTES_ITEMS_ITEMS_ARMAMENTO" FromRole="ITEMS_ARMAMENTO" ToRole="COMPONENTES_ITEMS" />
+          <NavigationProperty Name="HISTORICO_CMP" Relationship="EmiModel.FK_HISTORICO_CMP_ITEMS_ARMAMENTO" FromRole="ITEMS_ARMAMENTO" ToRole="HISTORICO_CMP" />
+          <NavigationProperty Name="HISTORICO_CMP1" Relationship="EmiModel.FK_HISTORICO_CMP_ITEMS_ARMAMENTO1" FromRole="ITEMS_ARMAMENTO" ToRole="HISTORICO_CMP" />
+          <NavigationProperty Name="UNIDADES" Relationship="EmiModel.FK_ITEMS_ARMAMENTO_UNIDADES" FromRole="ITEMS_ARMAMENTO" ToRole="UNIDADES" />
+          <NavigationProperty Name="MAT_BELICOS" Relationship="EmiModel.FK_ITEMS_ARMAMENTO_MAT_BELICOS" FromRole="ITEMS_ARMAMENTO" ToRole="MAT_BELICOS" />
+          <NavigationProperty Name="DESPACHOS" Relationship="EmiModel.FK_DESPACHOS_ITEMS_ARMAMENTO" FromRole="ITEMS_ARMAMENTO" ToRole="DESPACHOS" />
+        </EntityType>
+        <Association Name="FK_COMPONENTES_ITEMS_ITEMS_ARMAMENTO">
+          <End Type="EmiModel.ITEMS_ARMAMENTO" Role="ITEMS_ARMAMENTO" Multiplicity="1" />
+          <End Type="EmiModel.COMPONENTES_ITEMS" Role="COMPONENTES_ITEMS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEMS_ARMAMENTO">
+              <PropertyRef Name="ID_ITEM" />
+            </Principal>
+            <Dependent Role="COMPONENTES_ITEMS">
+              <PropertyRef Name="ID_ITEM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HISTORICO_CMP_ITEMS_ARMAMENTO">
+          <End Type="EmiModel.ITEMS_ARMAMENTO" Role="ITEMS_ARMAMENTO" Multiplicity="1" />
+          <End Type="EmiModel.HISTORICO_CMP" Role="HISTORICO_CMP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEMS_ARMAMENTO">
+              <PropertyRef Name="ID_ITEM" />
+            </Principal>
+            <Dependent Role="HISTORICO_CMP">
+              <PropertyRef Name="ID_ITEM_OPERABLE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HISTORICO_CMP_ITEMS_ARMAMENTO1">
+          <End Type="EmiModel.ITEMS_ARMAMENTO" Role="ITEMS_ARMAMENTO" Multiplicity="1" />
+          <End Type="EmiModel.HISTORICO_CMP" Role="HISTORICO_CMP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEMS_ARMAMENTO">
+              <PropertyRef Name="ID_ITEM" />
+            </Principal>
+            <Dependent Role="HISTORICO_CMP">
+              <PropertyRef Name="ID_ITEM_NO_OPERABLE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITEMS_ARMAMENTO_UNIDADES">
+          <End Type="EmiModel.UNIDADES" Role="UNIDADES" Multiplicity="0..1" />
+          <End Type="EmiModel.ITEMS_ARMAMENTO" Role="ITEMS_ARMAMENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNIDADES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Principal>
+            <Dependent Role="ITEMS_ARMAMENTO">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="LISTAS_ITEMS">
+          <Key>
+            <PropertyRef Name="ID_TABLA" />
+          </Key>
+          <Property Type="Int32" Name="ID_TABLA" Nullable="false" />
+          <Property Type="Int32" Name="ID_PADRE" />
+          <Property Type="Int32" Name="ID_LISTA" Nullable="false" />
+          <Property Type="String" Name="CODIGO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VALOR" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="LISTAS1" Relationship="EmiModel.FK_LISTAS_ITEMS_LISTAS" FromRole="LISTAS_ITEMS" ToRole="LISTAS1" />
+          <NavigationProperty Name="LISTAS_ITEMS1" Relationship="EmiModel.FK_LISTAS_ITEMS_LISTAS_ITEMS" FromRole="LISTAS_ITEMS" ToRole="LISTAS_ITEMS1" />
+          <NavigationProperty Name="LISTAS_ITEMS2" Relationship="EmiModel.FK_LISTAS_ITEMS_LISTAS_ITEMS" FromRole="LISTAS_ITEMS1" ToRole="LISTAS_ITEMS" />
+        </EntityType>
+        <Association Name="FK_LISTAS_ITEMS_LISTAS">
+          <End Type="EmiModel.LISTAS1" Role="LISTAS1" Multiplicity="1" />
+          <End Type="EmiModel.LISTAS_ITEMS" Role="LISTAS_ITEMS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LISTAS1">
+              <PropertyRef Name="ID_LISTA" />
+            </Principal>
+            <Dependent Role="LISTAS_ITEMS">
+              <PropertyRef Name="ID_LISTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LISTAS_ITEMS_LISTAS_ITEMS">
+          <End Type="EmiModel.LISTAS_ITEMS" Role="LISTAS_ITEMS" Multiplicity="0..1" />
+          <End Type="EmiModel.LISTAS_ITEMS" Role="LISTAS_ITEMS1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LISTAS_ITEMS">
+              <PropertyRef Name="ID_TABLA" />
+            </Principal>
+            <Dependent Role="LISTAS_ITEMS1">
+              <PropertyRef Name="ID_PADRE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="MAT_BELICOS">
+          <Key>
+            <PropertyRef Name="ID_MAT_BELICO" />
+          </Key>
+          <Property Type="Int32" Name="ID_MAT_BELICO" Nullable="false" />
+          <Property Type="String" Name="CODIGO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FABRICACION" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CALIBRE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CATEGORIA" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NOMBRE" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CANTIDAD_DISPONIBLE" />
+          <Property Type="DateTime" Name="FECHA_DOTACION" Nullable="false" Precision="0" />
+          <Property Type="String" Name="OBSERVACION" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA_REG" Nullable="false" Precision="3" />
+          <Property Type="String" Name="LOGIN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TIPO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DETALLES_PEDIDOS" Relationship="EmiModel.FK_DETALLES_PEDIDOS_MAT_BELICOS" FromRole="MAT_BELICOS" ToRole="DETALLES_PEDIDOS" />
+          <NavigationProperty Name="ITEMS_ARMAMENTO" Relationship="EmiModel.FK_ITEMS_ARMAMENTO_MAT_BELICOS" FromRole="MAT_BELICOS" ToRole="ITEMS_ARMAMENTO" />
+          <NavigationProperty Name="MOV_MAT_BELICOS" Relationship="EmiModel.FK_MOV_MAT_BELICOS_MAT_BELICOS" FromRole="MAT_BELICOS" ToRole="MOV_MAT_BELICOS" />
+          <NavigationProperty Name="MUNICIONES_UNIDADES" Relationship="EmiModel.FK_MUNICIONES_UNIDADES_MAT_BELICOS" FromRole="MAT_BELICOS" ToRole="MUNICIONES_UNIDADES" />
+          <NavigationProperty Name="PARTES_MAT_BELICOS" Relationship="EmiModel.FK_PARTES_MAT_BELICOS_MAT_BELICOS" FromRole="MAT_BELICOS" ToRole="PARTES_MAT_BELICOS" />
+        </EntityType>
+        <Association Name="FK_DETALLES_PEDIDOS_MAT_BELICOS">
+          <End Type="EmiModel.MAT_BELICOS" Role="MAT_BELICOS" Multiplicity="0..1" />
+          <End Type="EmiModel.DETALLES_PEDIDOS" Role="DETALLES_PEDIDOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Principal>
+            <Dependent Role="DETALLES_PEDIDOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITEMS_ARMAMENTO_MAT_BELICOS">
+          <End Type="EmiModel.MAT_BELICOS" Role="MAT_BELICOS" Multiplicity="0..1" />
+          <End Type="EmiModel.ITEMS_ARMAMENTO" Role="ITEMS_ARMAMENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Principal>
+            <Dependent Role="ITEMS_ARMAMENTO">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOV_MAT_BELICOS_MAT_BELICOS">
+          <End Type="EmiModel.MAT_BELICOS" Role="MAT_BELICOS" Multiplicity="1" />
+          <End Type="EmiModel.MOV_MAT_BELICOS" Role="MOV_MAT_BELICOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Principal>
+            <Dependent Role="MOV_MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MUNICIONES_UNIDADES_MAT_BELICOS">
+          <End Type="EmiModel.MAT_BELICOS" Role="MAT_BELICOS" Multiplicity="1" />
+          <End Type="EmiModel.MUNICIONES_UNIDADES" Role="MUNICIONES_UNIDADES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Principal>
+            <Dependent Role="MUNICIONES_UNIDADES">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PARTES_MAT_BELICOS_MAT_BELICOS">
+          <End Type="EmiModel.MAT_BELICOS" Role="MAT_BELICOS" Multiplicity="1" />
+          <End Type="EmiModel.PARTES_MAT_BELICOS" Role="PARTES_MAT_BELICOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Principal>
+            <Dependent Role="PARTES_MAT_BELICOS">
+              <PropertyRef Name="ID_MAT_BELICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ITEMS_MAT_LOGISTICOS">
+          <Key>
+            <PropertyRef Name="ID_ITEM" />
+          </Key>
+          <Property Type="Int32" Name="ID_ITEM" Nullable="false" />
+          <Property Type="Int32" Name="ID_MAT_LOGISTICO" />
+          <Property Type="String" Name="NRO_SERIE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA_BAJA" Precision="0" />
+          <Property Type="String" Name="OBSERVACION_BAJA" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID_UNIDAD" />
+          <Property Type="DateTime" Name="FECHA_REG" Precision="3" />
+          <Property Type="String" Name="LOGIN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOGIN_BAJA" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ESTADO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MAT_LOGISTICOS" Relationship="EmiModel.FK_ITEMS_MAT_LOGISTICOS_MAT_LOGISTICOS" FromRole="ITEMS_MAT_LOGISTICOS" ToRole="MAT_LOGISTICOS" />
+          <NavigationProperty Name="UNIDADES" Relationship="EmiModel.FK_ITEMS_MAT_LOGISTICOS_UNIDADES" FromRole="ITEMS_MAT_LOGISTICOS" ToRole="UNIDADES" />
+          <NavigationProperty Name="ITEMS_VERIFICACIONES" Relationship="EmiModel.FK_ITEMS_VERIFICACIONES_ITEMS_MAT_LOGISTICOS" FromRole="ITEMS_MAT_LOGISTICOS" ToRole="ITEMS_VERIFICACIONES" />
+          <NavigationProperty Name="DESPACHOS" Relationship="EmiModel.FK_DESPACHOS_ITEMS_MAT_LOGISTICOS1" FromRole="ITEMS_MAT_LOGISTICOS" ToRole="DESPACHOS" />
+        </EntityType>
+        <Association Name="FK_ITEMS_MAT_LOGISTICOS_MAT_LOGISTICOS">
+          <End Type="EmiModel.MAT_LOGISTICOS" Role="MAT_LOGISTICOS" Multiplicity="0..1" />
+          <End Type="EmiModel.ITEMS_MAT_LOGISTICOS" Role="ITEMS_MAT_LOGISTICOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAT_LOGISTICOS">
+              <PropertyRef Name="ID_MAT_LOGISTICO" />
+            </Principal>
+            <Dependent Role="ITEMS_MAT_LOGISTICOS">
+              <PropertyRef Name="ID_MAT_LOGISTICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITEMS_MAT_LOGISTICOS_UNIDADES">
+          <End Type="EmiModel.UNIDADES" Role="UNIDADES" Multiplicity="0..1" />
+          <End Type="EmiModel.ITEMS_MAT_LOGISTICOS" Role="ITEMS_MAT_LOGISTICOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNIDADES">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Principal>
+            <Dependent Role="ITEMS_MAT_LOGISTICOS">
+              <PropertyRef Name="ID_UNIDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ITEMS_VERIFICACIONES_ITEMS_MAT_LOGISTICOS">
+          <End Type="EmiModel.ITEMS_MAT_LOGISTICOS" Role="ITEMS_MAT_LOGISTICOS" Multiplicity="1" />
+          <End Type="EmiModel.ITEMS_VERIFICACIONES" Role="ITEMS_VERIFICACIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEMS_MAT_LOGISTICOS">
+              <PropertyRef Name="ID_ITEM" />
+            </Principal>
+            <Dependent Role="ITEMS_VERIFICACIONES">
+              <PropertyRef Name="ID_ITEM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DESPACHOS">
+          <Key>
+            <PropertyRef Name="ID_DESPACHO" />
+          </Key>
+          <Property Type="Int32" Name="ID_DESPACHO" Nullable="false" />
+          <Property Type="Int32" Name="ID_DETALLE" Nullable="false" />
+          <Property Type="Int32" Name="CANTIDAD_ENTREGADA" Nullable="false" />
+          <Property Type="Int32" Name="SALDO" Nullable="false" />
+          <Property Type="String" Name="LOGIN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="FECHA_REG" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="ID_ITEM_ARMAMENTO" />
+          <Property Type="Int32" Name="ID_ITEM_LOGISTICO" />
+          <Property Type="String" Name="ESTADO" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOGIN_RECEP" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DETALLES_PEDIDOS" Relationship="EmiModel.FK_DESPACHOS_DETALLES_PEDIDOS" FromRole="DESPACHOS" ToRole="DETALLES_PEDIDOS" />
+          <NavigationProperty Name="ITEMS_ARMAMENTO" Relationship="EmiModel.FK_DESPACHOS_ITEMS_ARMAMENTO" FromRole="DESPACHOS" ToRole="ITEMS_ARMAMENTO" />
+          <NavigationProperty Name="ITEMS_MAT_LOGISTICOS" Relationship="EmiModel.FK_DESPACHOS_ITEMS_MAT_LOGISTICOS1" FromRole="DESPACHOS" ToRole="ITEMS_MAT_LOGISTICOS" />
+        </EntityType>
+        <Association Name="FK_DESPACHOS_DETALLES_PEDIDOS">
+          <End Type="EmiModel.DETALLES_PEDIDOS" Role="DETALLES_PEDIDOS" Multiplicity="1" />
+          <End Type="EmiModel.DESPACHOS" Role="DESPACHOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DETALLES_PEDIDOS">
+              <PropertyRef Name="ID_DETALLE" />
+            </Principal>
+            <Dependent Role="DESPACHOS">
+              <PropertyRef Name="ID_DETALLE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DESPACHOS_ITEMS_ARMAMENTO">
+          <End Type="EmiModel.ITEMS_ARMAMENTO" Role="ITEMS_ARMAMENTO" Multiplicity="0..1" />
+          <End Type="EmiModel.DESPACHOS" Role="DESPACHOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEMS_ARMAMENTO">
+              <PropertyRef Name="ID_ITEM" />
+            </Principal>
+            <Dependent Role="DESPACHOS">
+              <PropertyRef Name="ID_ITEM_ARMAMENTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DESPACHOS_ITEMS_MAT_LOGISTICOS1">
+          <End Type="EmiModel.ITEMS_MAT_LOGISTICOS" Role="ITEMS_MAT_LOGISTICOS" Multiplicity="0..1" />
+          <End Type="EmiModel.DESPACHOS" Role="DESPACHOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ITEMS_MAT_LOGISTICOS">
+              <PropertyRef Name="ID_ITEM" />
+            </Principal>
+            <Dependent Role="DESPACHOS">
+              <PropertyRef Name="ID_ITEM_LOGISTICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CONTRASENAS">
+          <Key>
+            <PropertyRef Name="ID_CONTRASENA" />
+          </Key>
+          <Property Type="Int32" Name="ID_CONTRASENA" Nullable="false" />
+          <Property Type="Int32" Name="ID_USUARIO" Nullable="false" />
+          <Property Type="String" Name="CONTRASENA" Nullable="false" MaxLength="550" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA_ALTA" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="FECHA_EXPIRACION" Nullable="false" Precision="0" />
+          <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="NRO_FALLIDO" Nullable="false" />
+          <Property Type="DateTime" Name="FECHA_BLOQUEO" Precision="0" />
+          <NavigationProperty Name="USUARIOS" Relationship="EmiModel.FK_CONTRASENAS_USUARIOS" FromRole="CONTRASENAS" ToRole="USUARIOS" />
+        </EntityType>
+        <Association Name="FK_CONTRASENAS_USUARIOS">
+          <End Type="EmiModel.USUARIOS" Role="USUARIOS" Multiplicity="1" />
+          <End Type="EmiModel.CONTRASENAS" Role="CONTRASENAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIOS">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="CONTRASENAS">
+              <PropertyRef Name="ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BITACORAS">
+          <Key>
+            <PropertyRef Name="ID_HIST" />
+          </Key>
+          <Property Type="Int32" Name="ID_HIST" Nullable="false" />
+          <Property Type="String" Name="TABLA" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID_TABLA" Nullable="false" />
+          <Property Type="String" Name="COLUMNA" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VALOR" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOGIN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FECHA" Nullable="false" Precision="3" />
+          <Property Type="String" Name="ACCION" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EmiModelStoreContainer" CdmEntityContainer="EmiEntities">
+          <EntitySetMapping Name="PERFILES">
+            <EntityTypeMapping TypeName="EmiModel.PERFILES">
+              <MappingFragment StoreEntitySet="PERFILES">
+                <ScalarProperty Name="ID_UNIDAD" ColumnName="ID_UNIDAD" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="PERFIL" ColumnName="PERFIL" />
+                <ScalarProperty Name="ID_PERFIL" ColumnName="ID_PERFIL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIOS">
+            <EntityTypeMapping TypeName="EmiModel.USUARIOS">
+              <MappingFragment StoreEntitySet="USUARIOS">
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="ID_PERFIL" ColumnName="ID_PERFIL" />
+                <ScalarProperty Name="FECHA_CADUCIDAD" ColumnName="FECHA_CADUCIDAD" />
+                <ScalarProperty Name="FECHA_ALTA" ColumnName="FECHA_ALTA" />
+                <ScalarProperty Name="CONTRASEÑA" ColumnName="CONTRASEÑA" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MENU_OPCIONES">
+            <EntityTypeMapping TypeName="EmiModel.MENU_OPCIONES">
+              <MappingFragment StoreEntitySet="MENU_OPCIONES">
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="ID_PADRE" ColumnName="ID_PADRE" />
+                <ScalarProperty Name="ICONCCS" ColumnName="ICONCCS" />
+                <ScalarProperty Name="TOOLTIP" ColumnName="TOOLTIP" />
+                <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+                <ScalarProperty Name="MENU" ColumnName="MENU" />
+                <ScalarProperty Name="ID_MENU" ColumnName="ID_MENU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERFILES_OPCIONES">
+            <EntityTypeMapping TypeName="EmiModel.PERFILES_OPCIONES">
+              <MappingFragment StoreEntitySet="PERFILES_OPCIONES">
+                <ScalarProperty Name="ID_PERFIL" ColumnName="ID_PERFIL" />
+                <ScalarProperty Name="ID_MENU" ColumnName="ID_MENU" />
+                <ScalarProperty Name="ID_OPC_MEN" ColumnName="ID_OPC_MEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MATERIALES_BELICOS">
+            <EntityTypeMapping TypeName="EmiModel.MATERIALES_BELICOS">
+              <MappingFragment StoreEntitySet="MATERIALES_BELICOS">
+                <ScalarProperty Name="UNIDAD" ColumnName="UNIDAD" />
+                <ScalarProperty Name="FECHA_MODIFICACION" ColumnName="FECHA_MODIFICACION" />
+                <ScalarProperty Name="FECHA_DOTACION" ColumnName="FECHA_DOTACION" />
+                <ScalarProperty Name="FABRICACION" ColumnName="FABRICACION" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="CALIBRE" ColumnName="CALIBRE" />
+                <ScalarProperty Name="ARMAMENTO" ColumnName="ARMAMENTO" />
+                <ScalarProperty Name="CODIGO_MATERIAL" ColumnName="CODIGO_MATERIAL" />
+                <ScalarProperty Name="ID_MATERIAL" ColumnName="ID_MATERIAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COMPONENTES_ITEMS">
+            <EntityTypeMapping TypeName="EmiModel.COMPONENTES_ITEMS">
+              <MappingFragment StoreEntitySet="COMPONENTES_ITEMS">
+                <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="ID_ITEM" ColumnName="ID_ITEM" />
+                <ScalarProperty Name="ID_CMP" ColumnName="ID_CMP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DETALLES_PEDIDOS">
+            <EntityTypeMapping TypeName="EmiModel.DETALLES_PEDIDOS">
+              <MappingFragment StoreEntitySet="DETALLES_PEDIDOS">
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="CANTIDAD_ENTREGADA" ColumnName="CANTIDAD_ENTREGADA" />
+                <ScalarProperty Name="CANTIDAD_SOLICITADA" ColumnName="CANTIDAD_SOLICITADA" />
+                <ScalarProperty Name="ID_MAT_LOGISTICO" ColumnName="ID_MAT_LOGISTICO" />
+                <ScalarProperty Name="ID_MAT_BELICO" ColumnName="ID_MAT_BELICO" />
+                <ScalarProperty Name="ID_PEDIDO" ColumnName="ID_PEDIDO" />
+                <ScalarProperty Name="ID_DETALLE" ColumnName="ID_DETALLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HISTORICO_CMP">
+            <EntityTypeMapping TypeName="EmiModel.HISTORICO_CMP">
+              <MappingFragment StoreEntitySet="HISTORICO_CMP">
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+                <ScalarProperty Name="CMP_NO_OPERABLE" ColumnName="CMP_NO_OPERABLE" />
+                <ScalarProperty Name="ID_ITEM_NO_OPERABLE" ColumnName="ID_ITEM_NO_OPERABLE" />
+                <ScalarProperty Name="CMP_OPERABLE" ColumnName="CMP_OPERABLE" />
+                <ScalarProperty Name="ID_ITEM_OPERABLE" ColumnName="ID_ITEM_OPERABLE" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="ID_HIST" ColumnName="ID_HIST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HISTORICOS_PEDIDOS">
+            <EntityTypeMapping TypeName="EmiModel.HISTORICOS_PEDIDOS">
+              <MappingFragment StoreEntitySet="HISTORICOS_PEDIDOS">
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="ID_PEDIDO" ColumnName="ID_PEDIDO" />
+                <ScalarProperty Name="ID_HIST" ColumnName="ID_HIST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITEMS_VERIFICACIONES">
+            <EntityTypeMapping TypeName="EmiModel.ITEMS_VERIFICACIONES">
+              <MappingFragment StoreEntitySet="ITEMS_VERIFICACIONES">
+                <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+                <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="VALOR_ANTERIOR" ColumnName="VALOR_ANTERIOR" />
+                <ScalarProperty Name="VALOR_NUEVO" ColumnName="VALOR_NUEVO" />
+                <ScalarProperty Name="ID_ITEM" ColumnName="ID_ITEM" />
+                <ScalarProperty Name="ID_VERIFICACION" ColumnName="ID_VERIFICACION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MAT_LOGISTICOS">
+            <EntityTypeMapping TypeName="EmiModel.MAT_LOGISTICOS">
+              <MappingFragment StoreEntitySet="MAT_LOGISTICOS">
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+                <ScalarProperty Name="FECHA_DOTACION" ColumnName="FECHA_DOTACION" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="HORA_VIDA" ColumnName="HORA_VIDA" />
+                <ScalarProperty Name="CICLO_VIDA" ColumnName="CICLO_VIDA" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="NRO_PARTE" ColumnName="NRO_PARTE" />
+                <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+                <ScalarProperty Name="AERONAVE" ColumnName="AERONAVE" />
+                <ScalarProperty Name="TIPO_COMPONENTE" ColumnName="TIPO_COMPONENTE" />
+                <ScalarProperty Name="FABRICANTE" ColumnName="FABRICANTE" />
+                <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+                <ScalarProperty Name="ID_MAT_LOGISTICO" ColumnName="ID_MAT_LOGISTICO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MOV_MAT_BELICOS">
+            <EntityTypeMapping TypeName="EmiModel.MOV_MAT_BELICOS">
+              <MappingFragment StoreEntitySet="MOV_MAT_BELICOS">
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="ID_OPERACION" ColumnName="ID_OPERACION" />
+                <ScalarProperty Name="OPERACION" ColumnName="OPERACION" />
+                <ScalarProperty Name="SALDO" ColumnName="SALDO" />
+                <ScalarProperty Name="SALIDA" ColumnName="SALIDA" />
+                <ScalarProperty Name="ENTRADA" ColumnName="ENTRADA" />
+                <ScalarProperty Name="ID_MAT_BELICO" ColumnName="ID_MAT_BELICO" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="ID_MOV" ColumnName="ID_MOV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MOV_MUNICIONES_UNIDADES">
+            <EntityTypeMapping TypeName="EmiModel.MOV_MUNICIONES_UNIDADES">
+              <MappingFragment StoreEntitySet="MOV_MUNICIONES_UNIDADES">
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="ID_OPERACION" ColumnName="ID_OPERACION" />
+                <ScalarProperty Name="OPERACION" ColumnName="OPERACION" />
+                <ScalarProperty Name="SALDO" ColumnName="SALDO" />
+                <ScalarProperty Name="SALIDA" ColumnName="SALIDA" />
+                <ScalarProperty Name="ENTRADA" ColumnName="ENTRADA" />
+                <ScalarProperty Name="ID_MUNICION_UNIDAD" ColumnName="ID_MUNICION_UNIDAD" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="ID_MOV" ColumnName="ID_MOV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MUNICIONES_UNIDADES">
+            <EntityTypeMapping TypeName="EmiModel.MUNICIONES_UNIDADES">
+              <MappingFragment StoreEntitySet="MUNICIONES_UNIDADES">
+                <ScalarProperty Name="CANTIDAD_DISPONIBLE" ColumnName="CANTIDAD_DISPONIBLE" />
+                <ScalarProperty Name="ID_UNIDAD" ColumnName="ID_UNIDAD" />
+                <ScalarProperty Name="ID_MAT_BELICO" ColumnName="ID_MAT_BELICO" />
+                <ScalarProperty Name="ID_MUNICION_UNIDAD" ColumnName="ID_MUNICION_UNIDAD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PARTES_MAT_BELICOS">
+            <EntityTypeMapping TypeName="EmiModel.PARTES_MAT_BELICOS">
+              <MappingFragment StoreEntitySet="PARTES_MAT_BELICOS">
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="ID_MAT_BELICO" ColumnName="ID_MAT_BELICO" />
+                <ScalarProperty Name="ID_PARTE" ColumnName="ID_PARTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PEDIDOS">
+            <EntityTypeMapping TypeName="EmiModel.PEDIDOS">
+              <MappingFragment StoreEntitySet="PEDIDOS">
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="FECHA_MODIF" ColumnName="FECHA_MODIF" />
+                <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="OBSERVACIONES" ColumnName="OBSERVACIONES" />
+                <ScalarProperty Name="FECHA_PEDIDO" ColumnName="FECHA_PEDIDO" />
+                <ScalarProperty Name="ID_UNIDAD" ColumnName="ID_UNIDAD" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="NRO_PEDIDO" ColumnName="NRO_PEDIDO" />
+                <ScalarProperty Name="ID_PEDIDO" ColumnName="ID_PEDIDO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SALIDADES_MUNICIONES">
+            <EntityTypeMapping TypeName="EmiModel.SALIDADES_MUNICIONES">
+              <MappingFragment StoreEntitySet="SALIDADES_MUNICIONES">
+                <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+                <ScalarProperty Name="SALIDA" ColumnName="SALIDA" />
+                <ScalarProperty Name="ID_MUNICION_UNIDAD" ColumnName="ID_MUNICION_UNIDAD" />
+                <ScalarProperty Name="ID_SALIDA" ColumnName="ID_SALIDA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UNIDADES">
+            <EntityTypeMapping TypeName="EmiModel.UNIDADES">
+              <MappingFragment StoreEntitySet="UNIDADES">
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="UNIDAD" ColumnName="UNIDAD" />
+                <ScalarProperty Name="ID_UNIDAD" ColumnName="ID_UNIDAD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LISTAS1">
+            <EntityTypeMapping TypeName="EmiModel.LISTAS1">
+              <MappingFragment StoreEntitySet="LISTAS1">
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="MAYUS_MINUS" ColumnName="MAYUS_MINUS" />
+                <ScalarProperty Name="TIPO_VALOR" ColumnName="TIPO_VALOR" />
+                <ScalarProperty Name="TAM_LIMITE" ColumnName="TAM_LIMITE" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="LISTA" ColumnName="LISTA" />
+                <ScalarProperty Name="ID_LISTA" ColumnName="ID_LISTA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITEMS_ARMAMENTO">
+            <EntityTypeMapping TypeName="EmiModel.ITEMS_ARMAMENTO">
+              <MappingFragment StoreEntitySet="ITEMS_ARMAMENTO">
+                <ScalarProperty Name="LOGIN_BAJA" ColumnName="LOGIN_BAJA" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="ID_UNIDAD" ColumnName="ID_UNIDAD" />
+                <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+                <ScalarProperty Name="OBSERVACION_BAJA" ColumnName="OBSERVACION_BAJA" />
+                <ScalarProperty Name="FECHA_BAJA" ColumnName="FECHA_BAJA" />
+                <ScalarProperty Name="NRO_FUSIL" ColumnName="NRO_FUSIL" />
+                <ScalarProperty Name="ID_MAT_BELICO" ColumnName="ID_MAT_BELICO" />
+                <ScalarProperty Name="ID_ITEM" ColumnName="ID_ITEM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LISTAS_ITEMS">
+            <EntityTypeMapping TypeName="EmiModel.LISTAS_ITEMS">
+              <MappingFragment StoreEntitySet="LISTAS_ITEMS">
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+                <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+                <ScalarProperty Name="ID_LISTA" ColumnName="ID_LISTA" />
+                <ScalarProperty Name="ID_PADRE" ColumnName="ID_PADRE" />
+                <ScalarProperty Name="ID_TABLA" ColumnName="ID_TABLA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MAT_BELICOS">
+            <EntityTypeMapping TypeName="EmiModel.MAT_BELICOS">
+              <MappingFragment StoreEntitySet="MAT_BELICOS">
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+                <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+                <ScalarProperty Name="FECHA_DOTACION" ColumnName="FECHA_DOTACION" />
+                <ScalarProperty Name="CANTIDAD_DISPONIBLE" ColumnName="CANTIDAD_DISPONIBLE" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+                <ScalarProperty Name="CALIBRE" ColumnName="CALIBRE" />
+                <ScalarProperty Name="FABRICACION" ColumnName="FABRICACION" />
+                <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+                <ScalarProperty Name="ID_MAT_BELICO" ColumnName="ID_MAT_BELICO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITEMS_MAT_LOGISTICOS">
+            <EntityTypeMapping TypeName="EmiModel.ITEMS_MAT_LOGISTICOS">
+              <MappingFragment StoreEntitySet="ITEMS_MAT_LOGISTICOS">
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="LOGIN_BAJA" ColumnName="LOGIN_BAJA" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+                <ScalarProperty Name="ID_UNIDAD" ColumnName="ID_UNIDAD" />
+                <ScalarProperty Name="OBSERVACION_BAJA" ColumnName="OBSERVACION_BAJA" />
+                <ScalarProperty Name="FECHA_BAJA" ColumnName="FECHA_BAJA" />
+                <ScalarProperty Name="NRO_SERIE" ColumnName="NRO_SERIE" />
+                <ScalarProperty Name="ID_MAT_LOGISTICO" ColumnName="ID_MAT_LOGISTICO" />
+                <ScalarProperty Name="ID_ITEM" ColumnName="ID_ITEM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DESPACHOS">
+            <EntityTypeMapping TypeName="EmiModel.DESPACHOS">
+              <MappingFragment StoreEntitySet="DESPACHOS">
+                <ScalarProperty Name="LOGIN_RECEP" ColumnName="LOGIN_RECEP" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="ID_ITEM_LOGISTICO" ColumnName="ID_ITEM_LOGISTICO" />
+                <ScalarProperty Name="ID_ITEM_ARMAMENTO" ColumnName="ID_ITEM_ARMAMENTO" />
+                <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="SALDO" ColumnName="SALDO" />
+                <ScalarProperty Name="CANTIDAD_ENTREGADA" ColumnName="CANTIDAD_ENTREGADA" />
+                <ScalarProperty Name="ID_DETALLE" ColumnName="ID_DETALLE" />
+                <ScalarProperty Name="ID_DESPACHO" ColumnName="ID_DESPACHO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CONTRASENAS">
+            <EntityTypeMapping TypeName="EmiModel.CONTRASENAS">
+              <MappingFragment StoreEntitySet="CONTRASENAS">
+                <ScalarProperty Name="FECHA_BLOQUEO" ColumnName="FECHA_BLOQUEO" />
+                <ScalarProperty Name="NRO_FALLIDO" ColumnName="NRO_FALLIDO" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="FECHA_EXPIRACION" ColumnName="FECHA_EXPIRACION" />
+                <ScalarProperty Name="FECHA_ALTA" ColumnName="FECHA_ALTA" />
+                <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="ID_CONTRASENA" ColumnName="ID_CONTRASENA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BITACORAS">
+            <EntityTypeMapping TypeName="EmiModel.BITACORAS">
+              <MappingFragment StoreEntitySet="BITACORAS">
+                <ScalarProperty Name="ACCION" ColumnName="ACCION" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+                <ScalarProperty Name="COLUMNA" ColumnName="COLUMNA" />
+                <ScalarProperty Name="ID_TABLA" ColumnName="ID_TABLA" />
+                <ScalarProperty Name="TABLA" ColumnName="TABLA" />
+                <ScalarProperty Name="ID_HIST" ColumnName="ID_HIST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

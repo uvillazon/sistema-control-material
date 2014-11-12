@@ -1,0 +1,30 @@
+﻿Ext.define("App.Model.Puestos.Alimentadores", {
+    extend: "Ext.data.Model",
+    fields: [
+      { type: 'int', name: 'ID_ALIMENTADOR' },
+      { type: 'string', name: 'COD_ALIMENTADOR' },
+      { type: 'string', name: 'AREA_UBIC' },
+      { type: 'string', name: 'ALIMENTA_A_ZONA' },
+      { type: 'string', name: 'CONDUCTOR_DIAMETRO' },
+      { type: 'string', name: 'CONDUCTOR_CODIGO' },
+      { type: 'string', name: 'CONDUCTOR_TIPO_CABLE' },
+      { type: 'int', name: 'CONDUCTOR_CAP_CORRIENTE' },
+      { type: 'int', name: 'CONDUCTOR_NIV_TENSION' },
+      { type: 'string', name: 'MUFLA_TIPO_R' },
+      { type: 'string', name: 'MUFLA_CALIBRE_R' },
+      { type: 'int', name: 'MUFLA_NIV_TENSION_R' },
+      { type: 'string', name: 'MUFLA_TIPO_S' },
+      { type: 'string', name: 'MUFLA_CALIBRE_S' },
+      { type: 'int', name: 'MUFLA_NIV_TENSION_S' },
+      { type: 'string', name: 'MUFLA_TIPO_T' },
+      { type: 'string', name: 'MUFLA_CALIBRE_T' },
+      { type: 'int', name: 'MUFLA_NIV_TENSION_T' },
+      { type: 'int', name: 'TENS_MONOFAS' },
+      { type: 'int', name: 'TENS_TRIFAS' },
+      { type: 'int', name: 'ID_SUBEST' },
+      { type: 'string', name: 'NOM_SUBEST' },
+      { type: 'date', name: 'FECHA_ALTA', dateFormat: "d/m/Y", convert: Funciones.Fecha },
+      { type: 'date', name: 'FECHA_BAJA', dateFormat: "d/m/Y", convert: Funciones.Fecha },
+      { type: 'string', name: 'ESTADO' }
+    ]
+});

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EMI.Wcf.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="USUARIOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CONTRASENAS" nillable="true" type="tns:ArrayOfCONTRASENAS" />
+      <xs:element minOccurs="0" name="CONTRASEÑA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_ALTA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_CADUCIDAD" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_PERFIL" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_USUARIO" type="xs:int" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERFILES" nillable="true" type="tns:PERFILES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USUARIOS" nillable="true" type="tns:USUARIOS" />
+  <xs:complexType name="ArrayOfCONTRASENAS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CONTRASENAS" nillable="true" type="tns:CONTRASENAS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCONTRASENAS" nillable="true" type="tns:ArrayOfCONTRASENAS" />
+  <xs:complexType name="CONTRASENAS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CONTRASENA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_ALTA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_BLOQUEO" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_EXPIRACION" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_CONTRASENA" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_USUARIO" type="xs:int" />
+      <xs:element minOccurs="0" name="NRO_FALLIDO" type="xs:int" />
+      <xs:element minOccurs="0" name="USUARIOS" nillable="true" type="tns:USUARIOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CONTRASENAS" nillable="true" type="tns:CONTRASENAS" />
+  <xs:complexType name="PERFILES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_PERFIL" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_UNIDAD" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PERFIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERFILES_OPCIONES" nillable="true" type="tns:ArrayOfPERFILES_OPCIONES" />
+      <xs:element minOccurs="0" name="UNIDADES" nillable="true" type="tns:UNIDADES" />
+      <xs:element minOccurs="0" name="USUARIOS" nillable="true" type="tns:ArrayOfUSUARIOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PERFILES" nillable="true" type="tns:PERFILES" />
+  <xs:complexType name="ArrayOfPERFILES_OPCIONES">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PERFILES_OPCIONES" nillable="true" type="tns:PERFILES_OPCIONES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPERFILES_OPCIONES" nillable="true" type="tns:ArrayOfPERFILES_OPCIONES" />
+  <xs:complexType name="PERFILES_OPCIONES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID_MENU" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_OPC_MEN" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_PERFIL" type="xs:int" />
+      <xs:element minOccurs="0" name="MENU_OPCIONES" nillable="true" type="tns:MENU_OPCIONES" />
+      <xs:element minOccurs="0" name="PERFILES" nillable="true" type="tns:PERFILES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PERFILES_OPCIONES" nillable="true" type="tns:PERFILES_OPCIONES" />
+  <xs:complexType name="MENU_OPCIONES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CLASE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ICONCCS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_MENU" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_PADRE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MENU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERFILES_OPCIONES" nillable="true" type="tns:ArrayOfPERFILES_OPCIONES" />
+      <xs:element minOccurs="0" name="TOOLTIP" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MENU_OPCIONES" nillable="true" type="tns:MENU_OPCIONES" />
+  <xs:complexType name="UNIDADES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_UNIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="ITEMS_ARMAMENTO" nillable="true" type="tns:ArrayOfITEMS_ARMAMENTO" />
+      <xs:element minOccurs="0" name="ITEMS_MAT_LOGISTICOS" nillable="true" type="tns:ArrayOfITEMS_MAT_LOGISTICOS" />
+      <xs:element minOccurs="0" name="MUNICIONES_UNIDADES" nillable="true" type="tns:ArrayOfMUNICIONES_UNIDADES" />
+      <xs:element minOccurs="0" name="PEDIDOS" nillable="true" type="tns:ArrayOfPEDIDOS" />
+      <xs:element minOccurs="0" name="PERFILES" nillable="true" type="tns:ArrayOfPERFILES" />
+      <xs:element minOccurs="0" name="UNIDAD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UNIDADES" nillable="true" type="tns:UNIDADES" />
+  <xs:complexType name="ArrayOfITEMS_ARMAMENTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ITEMS_ARMAMENTO" nillable="true" type="tns:ITEMS_ARMAMENTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfITEMS_ARMAMENTO" nillable="true" type="tns:ArrayOfITEMS_ARMAMENTO" />
+  <xs:complexType name="ITEMS_ARMAMENTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="COMPONENTES_ITEMS" nillable="true" type="tns:ArrayOfCOMPONENTES_ITEMS" />
+      <xs:element minOccurs="0" name="DESPACHOS" nillable="true" type="tns:ArrayOfDESPACHOS" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_BAJA" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_REG" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HISTORICO_CMP" nillable="true" type="tns:ArrayOfHISTORICO_CMP" />
+      <xs:element minOccurs="0" name="HISTORICO_CMP1" nillable="true" type="tns:ArrayOfHISTORICO_CMP" />
+      <xs:element minOccurs="0" name="ID_ITEM" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_BELICO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_UNIDAD" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LOGIN_BAJA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MAT_BELICOS" nillable="true" type="tns:MAT_BELICOS" />
+      <xs:element minOccurs="0" name="NRO_FUSIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBSERVACION_BAJA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UNIDADES" nillable="true" type="tns:UNIDADES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ITEMS_ARMAMENTO" nillable="true" type="tns:ITEMS_ARMAMENTO" />
+  <xs:complexType name="ArrayOfCOMPONENTES_ITEMS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="COMPONENTES_ITEMS" nillable="true" type="tns:COMPONENTES_ITEMS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCOMPONENTES_ITEMS" nillable="true" type="tns:ArrayOfCOMPONENTES_ITEMS" />
+  <xs:complexType name="COMPONENTES_ITEMS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_CMP" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_ITEM" type="xs:int" />
+      <xs:element minOccurs="0" name="ITEMS_ARMAMENTO" nillable="true" type="tns:ITEMS_ARMAMENTO" />
+      <xs:element minOccurs="0" name="NOMBRE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="COMPONENTES_ITEMS" nillable="true" type="tns:COMPONENTES_ITEMS" />
+  <xs:complexType name="ArrayOfDESPACHOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DESPACHOS" nillable="true" type="tns:DESPACHOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDESPACHOS" nillable="true" type="tns:ArrayOfDESPACHOS" />
+  <xs:complexType name="DESPACHOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CANTIDAD_ENTREGADA" type="xs:int" />
+      <xs:element minOccurs="0" name="DETALLES_PEDIDOS" nillable="true" type="tns:DETALLES_PEDIDOS" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_REG" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_DESPACHO" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_DETALLE" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_ITEM_ARMAMENTO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_ITEM_LOGISTICO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ITEMS_ARMAMENTO" nillable="true" type="tns:ITEMS_ARMAMENTO" />
+      <xs:element minOccurs="0" name="ITEMS_MAT_LOGISTICOS" nillable="true" type="tns:ITEMS_MAT_LOGISTICOS" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LOGIN_RECEP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SALDO" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DESPACHOS" nillable="true" type="tns:DESPACHOS" />
+  <xs:complexType name="DETALLES_PEDIDOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CANTIDAD_ENTREGADA" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CANTIDAD_SOLICITADA" type="xs:int" />
+      <xs:element minOccurs="0" name="DESPACHOS" nillable="true" type="tns:ArrayOfDESPACHOS" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_DETALLE" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_BELICO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_LOGISTICO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_PEDIDO" type="xs:int" />
+      <xs:element minOccurs="0" name="MAT_BELICOS" nillable="true" type="tns:MAT_BELICOS" />
+      <xs:element minOccurs="0" name="MAT_LOGISTICOS" nillable="true" type="tns:MAT_LOGISTICOS" />
+      <xs:element minOccurs="0" name="PEDIDOS" nillable="true" type="tns:PEDIDOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DETALLES_PEDIDOS" nillable="true" type="tns:DETALLES_PEDIDOS" />
+  <xs:complexType name="MAT_BELICOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CALIBRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CANTIDAD_DISPONIBLE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CATEGORIA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DETALLES_PEDIDOS" nillable="true" type="tns:ArrayOfDETALLES_PEDIDOS" />
+      <xs:element minOccurs="0" name="FABRICACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_DOTACION" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_REG" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_MAT_BELICO" type="xs:int" />
+      <xs:element minOccurs="0" name="ITEMS_ARMAMENTO" nillable="true" type="tns:ArrayOfITEMS_ARMAMENTO" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MOV_MAT_BELICOS" nillable="true" type="tns:ArrayOfMOV_MAT_BELICOS" />
+      <xs:element minOccurs="0" name="MUNICIONES_UNIDADES" nillable="true" type="tns:ArrayOfMUNICIONES_UNIDADES" />
+      <xs:element minOccurs="0" name="NOMBRE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBSERVACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARTES_MAT_BELICOS" nillable="true" type="tns:ArrayOfPARTES_MAT_BELICOS" />
+      <xs:element minOccurs="0" name="TIPO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MAT_BELICOS" nillable="true" type="tns:MAT_BELICOS" />
+  <xs:complexType name="ArrayOfDETALLES_PEDIDOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DETALLES_PEDIDOS" nillable="true" type="tns:DETALLES_PEDIDOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDETALLES_PEDIDOS" nillable="true" type="tns:ArrayOfDETALLES_PEDIDOS" />
+  <xs:complexType name="ArrayOfMOV_MAT_BELICOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MOV_MAT_BELICOS" nillable="true" type="tns:MOV_MAT_BELICOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMOV_MAT_BELICOS" nillable="true" type="tns:ArrayOfMOV_MAT_BELICOS" />
+  <xs:complexType name="MOV_MAT_BELICOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ENTRADA" type="xs:int" />
+      <xs:element minOccurs="0" name="FECHA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_MAT_BELICO" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MOV" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_OPERACION" type="xs:int" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MAT_BELICOS" nillable="true" type="tns:MAT_BELICOS" />
+      <xs:element minOccurs="0" name="OPERACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SALDO" type="xs:int" />
+      <xs:element minOccurs="0" name="SALIDA" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MOV_MAT_BELICOS" nillable="true" type="tns:MOV_MAT_BELICOS" />
+  <xs:complexType name="ArrayOfMUNICIONES_UNIDADES">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MUNICIONES_UNIDADES" nillable="true" type="tns:MUNICIONES_UNIDADES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMUNICIONES_UNIDADES" nillable="true" type="tns:ArrayOfMUNICIONES_UNIDADES" />
+  <xs:complexType name="MUNICIONES_UNIDADES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CANTIDAD_DISPONIBLE" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_BELICO" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MUNICION_UNIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_UNIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="MAT_BELICOS" nillable="true" type="tns:MAT_BELICOS" />
+      <xs:element minOccurs="0" name="MOV_MUNICIONES_UNIDADES" nillable="true" type="tns:ArrayOfMOV_MUNICIONES_UNIDADES" />
+      <xs:element minOccurs="0" name="SALIDADES_MUNICIONES" nillable="true" type="tns:ArrayOfSALIDADES_MUNICIONES" />
+      <xs:element minOccurs="0" name="UNIDADES" nillable="true" type="tns:UNIDADES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MUNICIONES_UNIDADES" nillable="true" type="tns:MUNICIONES_UNIDADES" />
+  <xs:complexType name="ArrayOfMOV_MUNICIONES_UNIDADES">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MOV_MUNICIONES_UNIDADES" nillable="true" type="tns:MOV_MUNICIONES_UNIDADES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMOV_MUNICIONES_UNIDADES" nillable="true" type="tns:ArrayOfMOV_MUNICIONES_UNIDADES" />
+  <xs:complexType name="MOV_MUNICIONES_UNIDADES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ENTRADA" type="xs:int" />
+      <xs:element minOccurs="0" name="FECHA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_MOV" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MUNICION_UNIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_OPERACION" type="xs:int" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MUNICIONES_UNIDADES" nillable="true" type="tns:MUNICIONES_UNIDADES" />
+      <xs:element minOccurs="0" name="OPERACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SALDO" type="xs:int" />
+      <xs:element minOccurs="0" name="SALIDA" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MOV_MUNICIONES_UNIDADES" nillable="true" type="tns:MOV_MUNICIONES_UNIDADES" />
+  <xs:complexType name="ArrayOfSALIDADES_MUNICIONES">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SALIDADES_MUNICIONES" nillable="true" type="tns:SALIDADES_MUNICIONES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSALIDADES_MUNICIONES" nillable="true" type="tns:ArrayOfSALIDADES_MUNICIONES" />
+  <xs:complexType name="SALIDADES_MUNICIONES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FECHA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_REG" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_MUNICION_UNIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_SALIDA" type="xs:int" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MUNICIONES_UNIDADES" nillable="true" type="tns:MUNICIONES_UNIDADES" />
+      <xs:element minOccurs="0" name="OBSERVACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SALIDA" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SALIDADES_MUNICIONES" nillable="true" type="tns:SALIDADES_MUNICIONES" />
+  <xs:complexType name="ArrayOfPARTES_MAT_BELICOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PARTES_MAT_BELICOS" nillable="true" type="tns:PARTES_MAT_BELICOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPARTES_MAT_BELICOS" nillable="true" type="tns:ArrayOfPARTES_MAT_BELICOS" />
+  <xs:complexType name="PARTES_MAT_BELICOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_MAT_BELICO" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_PARTE" type="xs:int" />
+      <xs:element minOccurs="0" name="MAT_BELICOS" nillable="true" type="tns:MAT_BELICOS" />
+      <xs:element minOccurs="0" name="NOMBRE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PARTES_MAT_BELICOS" nillable="true" type="tns:PARTES_MAT_BELICOS" />
+  <xs:complexType name="MAT_LOGISTICOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AERONAVE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CICLO_VIDA" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPCION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DETALLES_PEDIDOS" nillable="true" type="tns:ArrayOfDETALLES_PEDIDOS" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FABRICANTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_DOTACION" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_REG" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GRUPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HORA_VIDA" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_LOGISTICO" type="xs:int" />
+      <xs:element minOccurs="0" name="ITEMS_MAT_LOGISTICOS" nillable="true" type="tns:ArrayOfITEMS_MAT_LOGISTICOS" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_PARTE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO_COMPONENTE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MAT_LOGISTICOS" nillable="true" type="tns:MAT_LOGISTICOS" />
+  <xs:complexType name="ArrayOfITEMS_MAT_LOGISTICOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ITEMS_MAT_LOGISTICOS" nillable="true" type="tns:ITEMS_MAT_LOGISTICOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfITEMS_MAT_LOGISTICOS" nillable="true" type="tns:ArrayOfITEMS_MAT_LOGISTICOS" />
+  <xs:complexType name="ITEMS_MAT_LOGISTICOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DESPACHOS" nillable="true" type="tns:ArrayOfDESPACHOS" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_BAJA" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_REG" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_ITEM" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_MAT_LOGISTICO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_UNIDAD" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ITEMS_VERIFICACIONES" nillable="true" type="tns:ArrayOfITEMS_VERIFICACIONES" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LOGIN_BAJA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MAT_LOGISTICOS" nillable="true" type="tns:MAT_LOGISTICOS" />
+      <xs:element minOccurs="0" name="NRO_SERIE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBSERVACION_BAJA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UNIDADES" nillable="true" type="tns:UNIDADES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ITEMS_MAT_LOGISTICOS" nillable="true" type="tns:ITEMS_MAT_LOGISTICOS" />
+  <xs:complexType name="ArrayOfITEMS_VERIFICACIONES">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ITEMS_VERIFICACIONES" nillable="true" type="tns:ITEMS_VERIFICACIONES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfITEMS_VERIFICACIONES" nillable="true" type="tns:ArrayOfITEMS_VERIFICACIONES" />
+  <xs:complexType name="ITEMS_VERIFICACIONES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FECHA" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_REG" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_ITEM" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_VERIFICACION" type="xs:int" />
+      <xs:element minOccurs="0" name="ITEMS_MAT_LOGISTICOS" nillable="true" type="tns:ITEMS_MAT_LOGISTICOS" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBSERVACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VALOR_ANTERIOR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VALOR_NUEVO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ITEMS_VERIFICACIONES" nillable="true" type="tns:ITEMS_VERIFICACIONES" />
+  <xs:complexType name="PEDIDOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DETALLES_PEDIDOS" nillable="true" type="tns:ArrayOfDETALLES_PEDIDOS" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_MODIF" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_PEDIDO" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FECHA_REG" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HISTORICOS_PEDIDOS" nillable="true" type="tns:ArrayOfHISTORICOS_PEDIDOS" />
+      <xs:element minOccurs="0" name="ID_PEDIDO" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_UNIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NRO_PEDIDO" type="xs:int" />
+      <xs:element minOccurs="0" name="OBSERVACIONES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UNIDADES" nillable="true" type="tns:UNIDADES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PEDIDOS" nillable="true" type="tns:PEDIDOS" />
+  <xs:complexType name="ArrayOfHISTORICOS_PEDIDOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HISTORICOS_PEDIDOS" nillable="true" type="tns:HISTORICOS_PEDIDOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHISTORICOS_PEDIDOS" nillable="true" type="tns:ArrayOfHISTORICOS_PEDIDOS" />
+  <xs:complexType name="HISTORICOS_PEDIDOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_HIST" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_PEDIDO" type="xs:int" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBSERVACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PEDIDOS" nillable="true" type="tns:PEDIDOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HISTORICOS_PEDIDOS" nillable="true" type="tns:HISTORICOS_PEDIDOS" />
+  <xs:complexType name="ArrayOfHISTORICO_CMP">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HISTORICO_CMP" nillable="true" type="tns:HISTORICO_CMP" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHISTORICO_CMP" nillable="true" type="tns:ArrayOfHISTORICO_CMP" />
+  <xs:complexType name="HISTORICO_CMP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CMP_NO_OPERABLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CMP_OPERABLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_HIST" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_ITEM_NO_OPERABLE" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_ITEM_OPERABLE" type="xs:int" />
+      <xs:element minOccurs="0" name="ITEMS_ARMAMENTO" nillable="true" type="tns:ITEMS_ARMAMENTO" />
+      <xs:element minOccurs="0" name="ITEMS_ARMAMENTO1" nillable="true" type="tns:ITEMS_ARMAMENTO" />
+      <xs:element minOccurs="0" name="LOGIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OBSERVACION" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HISTORICO_CMP" nillable="true" type="tns:HISTORICO_CMP" />
+  <xs:complexType name="ArrayOfPEDIDOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PEDIDOS" nillable="true" type="tns:PEDIDOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPEDIDOS" nillable="true" type="tns:ArrayOfPEDIDOS" />
+  <xs:complexType name="ArrayOfPERFILES">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PERFILES" nillable="true" type="tns:PERFILES" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPERFILES" nillable="true" type="tns:ArrayOfPERFILES" />
+  <xs:complexType name="ArrayOfUSUARIOS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USUARIOS" nillable="true" type="tns:USUARIOS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSUARIOS" nillable="true" type="tns:ArrayOfUSUARIOS" />
+</xs:schema>
