@@ -590,6 +590,7 @@
     <Content Include="App\View\BandejasEntrada\Principal.js" />
     <Content Include="App\View\Historicos\GridHistoricosMatLog.js" />
     <Content Include="App\View\Historicos\Principal.js" />
+    <Content Include="App\View\Reportes\PReporteArmamentoPorUnidad.js" />
     <Content Include="App\View\Reportes\PrincipalReporteArmamento.js" />
     <Content Include="App\View\Reportes\ReporteGeneralLogistico.js" />
     <Content Include="App\View\Reportes\ReporteGeneralLogisticoPorUnidad.js" />
