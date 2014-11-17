@@ -1,5 +1,6 @@
-﻿Ext.define("App.View.Reportes.PReporteGeneralLogistico", {
+﻿Ext.define("App.View.Reportes.PReporteGeneralLogisticoPorUnd", {
     extend: "App.Config.Abstract.PanelPrincipal",
+   
     view: '',
     initComponent: function () {
         var me = this;
@@ -12,11 +13,18 @@
         var me = this;
         //var direccion = Constantes.HOST + 'Reportes/ReporteArmamento.aspx?ID_MAT_BELICO=' + me.cbx_item_armamento.getValue() + '&ID_UNIDAD=' + Constantes.USUARIO.ID_UNIDAD;
         me.btn1.on('click', function () {
-            me.panel.load(
-                Constantes.HOST + 'Reportes/ReporteExistenciaLogistico.aspx?ANIO=' + me.cbx_anio.getValue() + '&MES=' + me.cbx_mes.getValue() + '&ID_UNIDAD=' + Constantes.USUARIO.ID_UNIDAD
+		
+		if (me.form.isValid()) {
+			me.panel.load(
+                Constantes.HOST + 'Reportes/ReporteExistenciaLogistico.aspx?ANIO=' + me.cbx_anio.getValue() + '&MES=' + me.cbx_mes.getValue() + '&ID_UNIDAD=' + me.cbx_unidad.getValue()
                 //Constantes.HOST + 'Reportes/ReporteArmamento.aspx?ID_MAT_BELICO=' + me.cbx_item_armamento.getValue() + '&ID_UNIDAD=' + Constantes.USUARIO.ID_UNIDAD
                 
             );
+		}
+		else {
+			Ext.Msg.alert("Error", "Falta Completar Formulario");
+		}
+            
         });
         // me.btn3.on('click', function () {
            // me.panel.load(
@@ -35,7 +43,6 @@
         
 		me.store_mes = Ext.create('App.Store.Listas.StoreLista');
         me.store_mes.setExtraParam('ID_LISTA', Lista.Buscar('MES'));
-        
         me.cbx_mes = Ext.create("App.Config.Componente.ComboBase", {
             fieldLabel: "Mes",
             name: "MES",
@@ -58,13 +65,25 @@
             allowBlank: false
         });
 
-        me.form.add([me.store_mes,me.store_anio, me.btn1 ]);
+        me.store_unidad = Ext.create('App.Store.Unidades.Unidades');
+        me.cbx_unidad = Ext.create("App.Config.Componente.ComboAutoBase", {
+            fieldLabel: "Unidad",
+            name: "ID_UNIDAD",
+            displayField: 'UNIDAD',
+            valueField: 'ID_UNIDAD',
+            allowBlank: false,
+            width: 400,
+            textoTpl: function () { return "{UNIDAD} - {DESCRIPCION}" },
+            store: me.store_unidad,
+        });
+
+        me.form.add([me.store_mes,me.store_anio,me.store_unidad, me.btn1 ]);
         //me.form = form;
         me.panel = Ext.create("App.Config.ux.IFrame", {
             height : 750,
         });
         me.panelMain = Ext.create("Ext.panel.Panel", {
-            title: 'Reporte Armamento P/Unidad',
+            title: 'Reporte',
             region: 'center',
             items: [me.panel]
         })
