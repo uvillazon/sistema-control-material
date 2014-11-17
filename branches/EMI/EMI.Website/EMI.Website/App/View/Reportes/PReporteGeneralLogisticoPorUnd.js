@@ -77,7 +77,7 @@
             store: me.store_unidad,
         });
 
-        me.form.add([me.store_mes,me.store_anio,me.store_unidad, me.btn1 ]);
+        me.form.add([me.cbx_mes,me.cbx_anio,me.cbx_unidad, me.btn1 ]);
         //me.form = form;
         me.panel = Ext.create("App.Config.ux.IFrame", {
             height : 750,
