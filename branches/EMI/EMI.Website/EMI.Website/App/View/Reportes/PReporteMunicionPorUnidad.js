@@ -32,15 +32,16 @@
         me.form = Ext.create("App.Config.Abstract.Form", { botones: false, icono: false, region : 'north' , columns : 3 });
         //me.btn3 = Funciones.CrearMenu('btn_Grafico', 'Generar Grafico', 'chart_bar', null, null, this);
         me.btn1 = Funciones.CrearMenu('btn_Normal', 'Generar', 'report', null, null, this);
-        me.store_item_armamento = Ext.create('App.Store.Armamentos.MatBelicos');
-        me.store_item_armamento.setExtraParams({ CATEGORIA: 'ARMAMENTO' });
+        me.store_item_armamento = Ext.create("App.Store.Armamentos.MunicionesUnidad");
+        
         me.cbx_item_armamento = Ext.create("App.Config.Componente.ComboAutoBase", {
-            fieldLabel: "Items Armamento1",
-            name: "ID_MAT_BELICO",
-            displayField: 'CODIGO',
-            valueField: 'ID_MAT_BELICO',
+            fieldLabel: "Municion",
+            name: "ID_MUNICION_UNIDAD",
+            displayField: 'CALIBRE',
+            valueField: 'ID_MUNICION_UNIDAD',
             width: 400,
-            textoTpl: function () { return "{CODIGO} - {NOMBRE} Cant. Disp. {CANTIDAD_DISPONIBLE}" },
+            disabled : true,
+            textoTpl: function () { return "{CODIGO} - {CALIBRE}" },
             store: me.store_item_armamento,
         });
 
@@ -53,6 +54,11 @@
             width: 400,
             textoTpl: function () { return "{UNIDAD} - {DESCRIPCION}" },
             store: me.store_unidad,
+        });
+        me.cbx_unidad.on('select', function (cmb, record) {
+            me.store_item_armamento.setExtraParams({ ID_UNIDAD: record[0].get('ID_UNIDAD') });
+            me.store_item_armamento.load();
+            me.cbx_item_armamento.setDisabled(false);
         });
 
         me.form.add([me.cbx_item_armamento,me.cbx_unidad, me.btn1]);
