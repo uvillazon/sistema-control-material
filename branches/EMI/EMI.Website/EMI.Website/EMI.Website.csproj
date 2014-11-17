@@ -590,6 +590,15 @@
     <Content Include="App\View\BandejasEntrada\Principal.js" />
     <Content Include="App\View\Historicos\GridHistoricosMatLog.js" />
     <Content Include="App\View\Historicos\Principal.js" />
+    <Content Include="App\View\Reportes\PReporteGeneral.js" />
+    <Content Include="App\View\Reportes\PReporteGeneralLogistico.js" />
+    <Content Include="App\View\Reportes\PReporteGeneralLogisticoPorUnd.js" />
+    <Content Include="App\View\Reportes\PReporteGeneralPorUnidad.js" />
+    <Content Include="App\View\Reportes\PReporteLogistico.js" />
+    <Content Include="App\View\Reportes\PReporteLogisticoPorUnidad.js" />
+    <Content Include="App\View\Reportes\PReporteMunicionPorUnidad.js" />
+    <Content Include="App\View\Reportes\PReportePedido.js" />
+    <Content Include="App\View\Reportes\PReportePedidoPorUnidad.js" />
     <Content Include="App\View\Reportes\PrincipalReporteMunicion.js" />
     <Content Include="App\View\Reportes\PReporteArmamentoPorUnidad.js" />
     <Content Include="App\View\Reportes\PrincipalReporteArmamento.js" />
